@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "518b38bd73c42107",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Inter-Service Communication.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Inter-Service Communication"
-            }
-          },
-          {
             "id": "c5c2bb61b31668e8",
             "type": "leaf",
             "state": {
@@ -36,8 +22,7 @@
               "title": "Diff: README"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -156,13 +141,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "mkdocs.yml.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of mkdocs.yml"
+              "title": "Outline"
             }
           },
           {
@@ -220,11 +204,23 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "247c65cde6556caf",
+  "active": "70250681444845d1",
   "lastOpenFiles": [
-    "mkdocs.yml",
+    "docs/Domain Driven Design.md",
+    "docs/Database per Service pattern.md",
+    "docs/Architectural choice.md",
+    "docs/ProtoBuf/ProtoBuf Workflow.md",
+    "docs/ProtoBuf/ProtoBuf.md",
+    "docs/ProtoBuf",
+    "docs/When to create or extend a service.md",
+    "docs/SAGA pattern.md",
+    "docs/README.md",
+    "docs/Inter-Service Communication.md",
+    "docs/Event Sourcing.md",
+    "docs",
     "New folder",
     "mkdocs.yml.md",
+    "mkdocs.yml",
     "Database per Service pattern.md",
     "README.md",
     "ProtoBuf/ProtoBuf.md",
@@ -242,19 +238,9 @@
     "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
     "copilot/copilot-custom-prompts/Rewrite as tweet.md",
     "copilot/copilot-custom-prompts/Remove URLs.md",
-    "copilot/copilot-custom-prompts/Generate glossary.md",
-    "copilot/copilot-custom-prompts/Generate table of contents.md",
-    "copilot/copilot-custom-prompts/Make longer.md",
-    "copilot/copilot-custom-prompts/Make shorter.md",
-    "copilot/copilot-custom-prompts/Emojify.md",
-    "copilot/copilot-custom-prompts/Explain like I am 5.md",
-    "copilot/copilot-custom-prompts/Simplify.md",
-    "copilot/copilot-custom-prompts/Summarize.md",
-    "copilot/copilot-custom-prompts/Translate to Chinese.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "Untitled 2.base",
-    "Untitled 1.base",
-    "Untitled.base"
+    "Untitled 1.base"
   ]
 }
