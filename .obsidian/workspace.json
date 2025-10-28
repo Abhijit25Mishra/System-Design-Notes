@@ -39,14 +39,14 @@
             "id": "1fc960689e3bb384",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "ProtoBuf/ProtoBuf Workflow.md",
-                "mode": "source",
-                "source": false
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "ProtoBuf Workflow"
+              "icon": "diff",
+              "title": "Diff: workspace.json"
             }
           }
         ],
@@ -123,7 +123,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ProtoBuf/ProtoBuf Workflow.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +132,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for ProtoBuf Workflow"
+              "title": "Backlinks"
             }
           },
           {
@@ -142,12 +141,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ProtoBuf/ProtoBuf Workflow.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from ProtoBuf Workflow"
+              "title": "Outgoing links"
             }
           },
           {
@@ -171,13 +169,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ProtoBuf/ProtoBuf Workflow.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ProtoBuf Workflow"
+              "title": "Outline"
             }
           },
           {
@@ -219,8 +216,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5,
-    "collapsed": true
+    "width": 284.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -238,11 +234,11 @@
   },
   "active": "1fc960689e3bb384",
   "lastOpenFiles": [
+    "ProtoBuf/ProtoBuf Workflow.md",
     "README.md",
     "Database per Service pattern.md",
     "Inter-Service Communication.md",
     "SAGA pattern.md",
-    "ProtoBuf/ProtoBuf Workflow.md",
     "ProtoBuf/ProtoBuf.md",
     "ProtoBuf",
     "Event Sourcing.md",
