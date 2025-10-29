@@ -583,9 +583,11 @@
 <p>XML was a common choice for data interchange but its performance characteristics were inadequate for scale and latency requirement of Google's infrastructure. JSON gained popularity for its simplicity and direct mapping to JavaScript objects, but as a text-based format, it still carries significant size and parsing overhead compared to optimized binary formats.</p>
 <p>All data structure in protobuf are called messages.</p>
 <h2 id="core-philosophy">Core Philosophy</h2>
-<p>The design of Protocol Buffer is built upon a distinct philosophy that prioritizes machine to machine efficiency and contract based design over given readability and ad hoc flexibility. This philosophy is embodied in three core principles.
-1. <strong>Schema-Driven</strong> :  messages must be explicitly defined in special files with a dot protobuff extension These files are written using Interface Definition Language that describes the fields of a message their data type and their unique identifying numbers. This schema first approach enforces a strict contract between communicating parties ensuring type safety and data consistency. <strong>This contract becomes the single source of truth for the data structure</strong></p>
+<p>The design of Protocol Buffer is built upon a distinct philosophy that prioritizes machine to machine efficiency and contract based design over given readability and ad hoc flexibility. This philosophy is embodied in three core principles.</p>
 <ol>
+<li>
+<p><strong>Schema-Driven</strong> :  messages must be explicitly defined in special files with a dot protobuff extension These files are written using Interface Definition Language that describes the fields of a message their data type and their unique identifying numbers. This schema first approach enforces a strict contract between communicating parties ensuring type safety and data consistency. <strong>This contract becomes the single source of truth for the data structure</strong></p>
+</li>
 <li>
 <p><strong>language-agnostic and platform-neutral</strong> : The .proto file serves as a universal, language-independent contract. From this single definition, the Protobuf compiler, protoc, generates native source code for a wide array of programming languages, including C++, Java, Python, Go, C#, Dart, and Ruby. The generated code provides a strongly-typed, easy-to-use API for creating, manipulating, serializing, and deserializing the defined messages. This allows services written in different languages to communicate seamlessly, as long as they are compiled from the same .proto definition.</p>
 </li>
@@ -597,19 +599,13 @@
 <table>
 <thead>
 <tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
+<th>Feature</th>
+<th>proto2 Behavior</th>
+<th>proto3 Behavior</th>
+<th>edition = "2023" Behavior</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>Feature</td>
-<td>proto2 Behavior</td>
-<td>proto3 Behavior</td>
-<td>edition = "2023" Behavior</td>
-</tr>
 <tr>
 <td>Syntax Declaration</td>
 <td>syntax = "proto2"; (or omitted)</td>
