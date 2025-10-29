@@ -11,15 +11,14 @@
             "id": "c5c2bb61b31668e8",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "README.md",
-                "bFile": "README.md",
-                "aRef": "HEAD",
-                "bRef": ""
+                "file": "docs/ProtoBuf/ProtoBuf.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: README"
+              "icon": "lucide-file",
+              "title": "ProtoBuf"
             }
           }
         ]
@@ -95,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "docs/ProtoBuf/ProtoBuf.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for ProtoBuf"
             }
           },
           {
@@ -113,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "docs/ProtoBuf/ProtoBuf.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from ProtoBuf"
             }
           },
           {
@@ -141,12 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "docs/ProtoBuf/ProtoBuf.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of ProtoBuf"
             }
           },
           {
@@ -204,12 +206,12 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "70250681444845d1",
+  "active": "c5c2bb61b31668e8",
   "lastOpenFiles": [
+    "docs/ProtoBuf/ProtoBuf Workflow.md",
     "docs/Domain Driven Design.md",
     "docs/Database per Service pattern.md",
     "docs/Architectural choice.md",
-    "docs/ProtoBuf/ProtoBuf Workflow.md",
     "docs/ProtoBuf/ProtoBuf.md",
     "docs/ProtoBuf",
     "docs/When to create or extend a service.md",
