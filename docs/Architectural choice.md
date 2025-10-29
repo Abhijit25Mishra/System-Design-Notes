@@ -1,4 +1,4 @@
-# Monolithic vs. Microservices
+## Monolithic vs. Microservices
 
 #### Monolithic
 - A single, unified codebase.
