@@ -501,14 +501,30 @@
   <h1>Database per Service pattern</h1>
 
 <p>The Database per Service pattern is a core tenet of microservices architecture which dictates that each microservice must own and manage its own private database (or a private schema within a shared database server). Crucially, this data store is considered part of the service's internal implementation and must not be directly accessed by any other service. All communication and data exchange must occur exclusively through the service's public API.</p>
-<p>Pros
-1. <strong>Loose Coupling</strong>
-2. <strong>Technology Freedom (Polyglot Persistence)</strong>
-3. <strong>Independent Scalability and Fault Isolation</strong></p>
-<p>Cons:
-1. <strong>Distributed Transactions</strong>: <strong>Implementing business transactions that span multiple services becomes highly complex. Traditional ACID (Atomicity, Consistency, Isolation, Durability) transactions, which rely on two-phase commits, are often not feasible or supported by modern NoSQL databases and are generally avoided in microservices due to their negative impact on availability and performance, as described by the CAP theorem.</strong>
-2. <strong>Cross-Service Queries: Performing queries that require joining data from multiple, now-separate databases is challenging. Such operations cannot be handled by a simple SQL join and require more complex patterns.</strong>
-3. <strong>Operational Complexity: The need to deploy, manage, monitor, and back up a multitude of different database technologies increases the operational burden on the organization.</strong></p>
+<p>Pros</p>
+<ol>
+<li>
+<p><strong>Loose Coupling</strong></p>
+</li>
+<li>
+<p><strong>Technology Freedom (Polyglot Persistence)</strong></p>
+</li>
+<li>
+<p><strong>Independent Scalability and Fault Isolation</strong></p>
+</li>
+</ol>
+<p>Cons:</p>
+<ol>
+<li>
+<p><strong>Distributed Transactions</strong>: <strong>Implementing business transactions that span multiple services becomes highly complex. Traditional ACID (Atomicity, Consistency, Isolation, Durability) transactions, which rely on two-phase commits, are often not feasible or supported by modern NoSQL databases and are generally avoided in microservices due to their negative impact on availability and performance, as described by the CAP theorem.</strong></p>
+</li>
+<li>
+<p><strong>Cross-Service Queries: Performing queries that require joining data from multiple, now-separate databases is challenging. Such operations cannot be handled by a simple SQL join and require more complex patterns.</strong></p>
+</li>
+<li>
+<p><strong>Operational Complexity: The need to deploy, manage, monitor, and back up a multitude of different database technologies increases the operational burden on the organization.</strong></p>
+</li>
+</ol>
 <p>To address the challenge of distributed transactions, the [[SAGA pattern]] is the most common solution.</p>
 
 
