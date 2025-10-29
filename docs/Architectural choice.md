@@ -7,14 +7,21 @@
 - The application is deployed as a single unit.
 
 **Pros:**
+
 1. Better for small-scale teams.
+
 2. Simplicity and speed. Development is faster and deployment is straightforward.
+
 3. Tracing a request is easier.
 
 **Cons:** As it scales, all the pros turn into cons.
+
 1. Slow development, unintended changes.
+
 2. Scaling becomes inefficient.
+
 3. A single error can compromise the availability of the entire application.
+
 4. New technology adoption is blocked.
 
 #### Microservices
@@ -24,8 +31,11 @@
 - Communicates through APIs.
 
 **Pros:**
+
 1. Distinct scaling requirements can be handled.
+
 2. Enables technological diversity.
+
 3. Dramatically improves fault isolation.
 
 Microservices solve a lot of problems that are present in a monolithic architecture. Adopting microservices is often driven by the need to scale the organization, not just the application. A large team working on a single monolithic codebase inevitably faces high coordination overhead, frequent merge conflicts, and a bottlenecked release pipeline.
