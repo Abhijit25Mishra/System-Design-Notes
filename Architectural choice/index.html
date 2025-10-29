@@ -639,15 +639,33 @@
 <li>All components are interdependent.</li>
 <li>The application is deployed as a single unit.</li>
 </ul>
-<p><strong>Pros:</strong>
-1. Better for small-scale teams.
-2. Simplicity and speed. Development is faster and deployment is straightforward.
-3. Tracing a request is easier.</p>
-<p><strong>Cons:</strong> As it scales, all the pros turn into cons.
-1. Slow development, unintended changes.
-2. Scaling becomes inefficient.
-3. A single error can compromise the availability of the entire application.
-4. New technology adoption is blocked.</p>
+<p><strong>Pros:</strong></p>
+<ol>
+<li>
+<p>Better for small-scale teams.</p>
+</li>
+<li>
+<p>Simplicity and speed. Development is faster and deployment is straightforward.</p>
+</li>
+<li>
+<p>Tracing a request is easier.</p>
+</li>
+</ol>
+<p><strong>Cons:</strong> As it scales, all the pros turn into cons.</p>
+<ol>
+<li>
+<p>Slow development, unintended changes.</p>
+</li>
+<li>
+<p>Scaling becomes inefficient.</p>
+</li>
+<li>
+<p>A single error can compromise the availability of the entire application.</p>
+</li>
+<li>
+<p>New technology adoption is blocked.</p>
+</li>
+</ol>
 <h4 id="microservices">Microservices</h4>
 <ul>
 <li>A set of applications.</li>
@@ -655,10 +673,18 @@
 <li>Loosely coupled, i.e., each service handles a different business function.</li>
 <li>Communicates through APIs.</li>
 </ul>
-<p><strong>Pros:</strong>
-1. Distinct scaling requirements can be handled.
-2. Enables technological diversity.
-3. Dramatically improves fault isolation.</p>
+<p><strong>Pros:</strong></p>
+<ol>
+<li>
+<p>Distinct scaling requirements can be handled.</p>
+</li>
+<li>
+<p>Enables technological diversity.</p>
+</li>
+<li>
+<p>Dramatically improves fault isolation.</p>
+</li>
+</ol>
 <p>Microservices solve a lot of problems that are present in a monolithic architecture. Adopting microservices is often driven by the need to scale the organization, not just the application. A large team working on a single monolithic codebase inevitably faces high coordination overhead, frequent merge conflicts, and a bottlenecked release pipeline.
 Microservices minimize cross-team communication overhead, enabling parallel development and deployment. Data consistency is one area where a monolithic architecture is often preferred, as it is easier to maintain strong consistency.</p>
 <p>[[When to create or extend a service]] ?</p>
