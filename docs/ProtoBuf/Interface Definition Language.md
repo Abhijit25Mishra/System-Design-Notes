@@ -1,32 +1,30 @@
 
-## IDL 
+# Interface Definition Language (IDL)
 
 The fundamental unit of data structure in [[Protobuf]] is the message. A message is a logical record of information, analogous to a class in Java or a struct in C++ or Go.
 
-### Syntax:
+## Syntax
 
-A message is declared using the message keyword, followed by its name and a pair of curly braces enclosing its field definitions.29
+A message is declared using the `message` keyword, followed by its name and a pair of curly braces enclosing its field definitions.
 
-  
-
-```Protocol Buffers
-message SongRequest {  
-  string song_name = 1;  
-  int64 artist_id = 2;  
-}  
+```protobuf
+message SongRequest {
+    string song_name = 1;
+    int64 artist_id = 2;
+}
 ```
-  
 
-### Naming Conventions:
+## Naming Conventions
 
-The official Protobuf style guide recommends using **TitleCase**  **for message names** and **lower_snake_case for field names**. Following these conventions ensures that the generated code is idiomatic in the target languages, as the compiler often transforms lower_snake_case into the conventional style of the target language (e.g., camelCase in Java).
+The official Protobuf style guide recommends using:
+- `TitleCase` for message names
+- `lower_snake_case` for field names
 
-### Nested Messages:
+Following these conventions ensures that the generated code is idiomatic in the target languages, as the compiler often transforms `lower_snake_case` into the conventional style of the target language (e.g., `camelCase` in Java).### Nested Messages:
 
 Messages can be defined within the scope of other messages. This is useful for grouping related data structures and creating a logical namespace.
 
-```Protocol Buffers
-
+```Protocol
 message SearchResponse {  
   message Result {  
     string url = 1;  
@@ -43,7 +41,7 @@ Here, Result is a nested message type that can only be accessed within the conte
 Messages can be defined out of the scope of the message, i.e in a different file, this can be later imported into the required message. 
 
 > **result.proto**
-```Protocol Buffers
+```Protocol
 syntax = "proto3";
 
 package search;
@@ -56,7 +54,7 @@ message Result {
 ```
 
 > **search_response.proto**
-``` Protocol Buffers
+``` Protocol
 syntax = "proto3";
 
 package search;
@@ -126,7 +124,7 @@ Each field in a message must have a cardinality, which specifies how many times 
 ### Syntax: 
 A service is defined using the service keyword, containing a list of rpc methods.  
 
-```Protocol Buffers  
+```Protocol  
 service SearchService {  
   rpc Search(SearchRequest) returns (SearchResponse);  
 }  

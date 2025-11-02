@@ -1,13 +1,17 @@
 
+# Inter-Service Communication
+
 The way microservices communicate is a defining characteristic of the [[Architectural choice|architecture]], directly influencing performance, coupling, and resilience. A well-designed system often employs a mix of communication styles, choosing the right protocol for each specific interaction.
 
-there are mainly 2 different types of communication
-1. Synchronous Communication: Direct Request/Response
-	1. REST over HTTP (Most used) : simple, less complexity, json, stateless, wide support, readable, bad performance. 
-	2. gRPC : more complex, [[protobuf]], binary format (not readable), great performace 
-2. Asynchronous Communication: Event-Driven Architecture
-	1. Message Queues (RabbitMQ, Amazon SQS): This model is typically used for command-based communication, where a message represents a task to be performed. A producer sends a message to a specific queue, and a single consumer from a group of workers retrieves and processes that message. This pattern is excellent for distributing workloads, ensuring reliable task processing, and implementing load leveling to smooth out traffic spikes.
-	2. Event Streams / Publish - Suscribe (Apache kafka, Amazon SNS) : This model is the foundation of event-driven architectures and is used for broadcasting information. A producer service publishes an event—a record of something that has happened—to a topic. Any number of consumer services can subscribe to that topic and will receive a copy of the event to react to it independently. This pattern is ideal for notifying multiple parts of a system about a state change, such as an OrderPlaced or UserRegistered event. 
+There are mainly two different types of communication:
+
+1. **Synchronous Communication**: Direct Request/Response
+    - **REST over HTTP** (Most used): Simple, less complexity, JSON, stateless, wide support, readable, lower performance
+    - **gRPC**: More complex, [[protobuf]], binary format (not readable), great performance
+
+2. **Asynchronous Communication**: Event-Driven Architecture
+    - **Message Queues** (RabbitMQ, Amazon SQS): This model is typically used for command-based communication, where a message represents a task to be performed. A producer sends a message to a specific queue, and a single consumer from a group of workers retrieves and processes that message. This pattern is excellent for distributing workloads, ensuring reliable task processing, and implementing load leveling to smooth out traffic spikes.
+    - **Event Streams / Publish-Subscribe** (Apache Kafka, Amazon SNS): This model is the foundation of event-driven architectures and is used for broadcasting information. A producer service publishes an event—a record of something that has happened—to a topic. Any number of consumer services can subscribe to that topic and will receive a copy of the event to react to it independently. This pattern is ideal for notifying multiple parts of a system about a state change, such as an `OrderPlaced` or `UserRegistered` event.
 
 
 Asynchronous communication significantly improves system resilience and scalability. If a consumer service is temporarily unavailable, messages can be buffered in the broker and processed once the service recovers. This prevents failures from cascading. Furthermore, producers and consumers can be scaled independently based on their respective loads, and the non-blocking nature of the communication enhances the perceived responsiveness of the system. The main challenges are the added operational complexity of managing a message broker and the cognitive shift required to design and debug systems based on eventual consistency.

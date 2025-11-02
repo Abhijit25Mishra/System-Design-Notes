@@ -5,71 +5,70 @@ docs_dir: docs
 use_directory_urls: true
 
 theme:
-  name: material
-  font:
-    text: Inter
-    code: JetBrains Mono
+    name: material
+    font:
+        text: Inter
+        code: JetBrains Mono
 
-  palette:
-    - scheme: default
-      primary: green
-      accent: lime
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - scheme: slate
-      primary: green
-      accent: lime
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
+    palette:
+        - scheme: default
+          primary: green
+          accent: lime
+          toggle:
+              icon: material/weather-night
+              name: Switch to dark mode
+        - scheme: slate
+          primary: green
+          accent: lime
+          toggle:
+              icon: material/weather-sunny
+              name: Switch to light mode
 
-  features:
-    # - navigation.instant
-    # - navigation.expand  
-    # - navigation.sections
-    # - navigation.indexes
-    # - navigation.tracking
-    # - navigation.top
-    - search.highlight
-    - search.suggest
-    # - toc.integrate
-    - content.code.copy
-    - content.action.edit
-    - header.autohide
+    features:
+        - navigation.instant
+        # - navigation.expand
+        # - navigation.sections
+        - navigation.indexes
+        - navigation.tracking
+        - navigation.top
+        - search.highlight
+        - search.suggest
+        - toc.integrate
+        - content.code.copy
+        - content.action.edit
+        - header.autohide
 
 repo_url: https://github.com/abhijit25mishra/System-Design-Notes
 repo_name: GitHub
 edit_uri: edit/main/docs/
 
 plugins:
-  - awesome-pages: 
-      collapse_single_pages: true
-      # ignore_pages_files: true
-  - search
+    - awesome-pages:
+          collapse_single_pages: true
+          # ignore_pages_files: true
+    - search
 
 extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/abhijit25mishra
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.in/abhijit25mishra/
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/abhijit25mishra
+        - icon: fontawesome/brands/linkedin
+          link: https://www.linkedin.in/abhijit25mishra/
 
 markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.highlight
-  - pymdownx.inlinehilite
-  - pymdownx.tabbed:
-      alternate_style: true
-  - toc:
-      permalink: true
-  - pymdownx.magiclink
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - attr_list
-
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+    - pymdownx.highlight
+    - pymdownx.inlinehilite
+    - pymdownx.tabbed:
+          alternate_style: true
+    - toc:
+          permalink: true
+    - pymdownx.magiclink
+    - pymdownx.tasklist:
+          custom_checkbox: true
+    - attr_list
 # ADDED this manual navigation block back
 # nav:
 #   - Home: index.md
@@ -91,4 +90,5 @@ markdown_extensions:
 #       - ProtoBuf Workflow: "ProtoBuf/ProtoBuf Workflow.md"
 #       - Protoc Compiler: "ProtoBuf/Protoc Compiler.md"
 #       - Serializing and Deserializing in ProtoBuf: "ProtoBuf/Serializing and Deserializing in ProtoBuf.md"
+
 

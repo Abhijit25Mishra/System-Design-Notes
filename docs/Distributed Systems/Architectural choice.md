@@ -1,49 +1,96 @@
-## Monolithic vs. Microservices
+# Architectural Choices
 
-#### Monolithic
-- A single, unified codebase.
-- All business functions are contained in a single application.
-- All components are interdependent.
-- The application is deployed as a single unit.
+This document compares two main architectural patterns: Monolithic and Microservices architectures.
 
-**Pros:**
+## Monolithic Architecture
 
-1. Better for small-scale teams.
+A monolithic architecture is characterized by:
+- Single, unified codebase
+- All business functions in one application
+- Interdependent components
+- Single-unit deployment
 
-2. Simplicity and speed. Development is faster and deployment is straightforward.
+### Advantages
 
-3. Tracing a request is easier.
+1. **Team Size Compatibility**
+   - Ideal for small-scale teams
+   - Easier team coordination
 
-**Cons:** As it scales, all the pros turn into cons.
+2. **Development Simplicity**
+   - Faster development cycles
+   - Straightforward deployment process
 
-1. Slow development, unintended changes.
+3. **Request Tracing**
+   - Easier to trace and debug requests
+   - Single codebase to search
 
-2. Scaling becomes inefficient.
+### Disadvantages
 
-3. A single error can compromise the availability of the entire application.
+As the application scales, advantages often become challenges:
 
-4. New technology adoption is blocked.
+1. **Development Speed**
+   - Slower development cycles
+   - Higher risk of unintended side effects
 
-#### Microservices
-- A set of applications.
-- Independent of each other.
-- Loosely coupled, i.e., each service handles a different business function.
+2. **Scaling Issues**
+   - Inefficient resource utilization
+   - Must scale entire application
+
+3. **Reliability Concerns**
+   - Single points of failure
+   - One error affects entire application
+
+4. **Technology Constraints**
+   - Difficult to adopt new technologies
+   - Stack decisions affect entire application
+
+## Microservices Architecture
+
+A microservices architecture consists of:
+- Multiple independent applications
+- Services operate independently
+- Loose coupling between services
+- Each service handles specific business functions
 - Communicates through APIs.
 
-**Pros:**
+### Advantages
 
-1. Distinct scaling requirements can be handled.
+1. **Flexible Scaling**
+   - Handle distinct scaling requirements
+   - Scale services independently
+   - Optimize resource usage
 
-2. Enables technological diversity.
+2. **Technology Freedom**
+   - Enable technological diversity
+   - Choose best tools for each service
+   - Easier to adopt new technologies
 
-3. Dramatically improves fault isolation.
+3. **Improved Reliability**
+   - Better fault isolation
+   - Failures don't cascade easily
+   - Higher system resilience
 
-Microservices solve a lot of problems that are present in a monolithic architecture. Adopting microservices is often driven by the need to scale the organization, not just the application. A large team working on a single monolithic codebase inevitably faces high coordination overhead, frequent merge conflicts, and a bottlenecked release pipeline.
-Microservices minimize cross-team communication overhead, enabling parallel development and deployment. Data consistency is one area where a monolithic architecture is often preferred, as it is easier to maintain strong consistency.
+### Key Benefits
 
-[[When to create or extend a service]] ?
+Microservices solve many problems present in monolithic architectures. The adoption is often driven by organizational scaling needs rather than just technical requirements. 
 
+When working with a monolithic codebase, large teams face:
+- High coordination overhead
+- Frequent merge conflicts
+- Bottlenecked release pipeline
 
+Microservices help by:
+- Minimizing cross-team communication overhead
+- Enabling parallel development
+- Supporting independent deployment
+
+However, data consistency is one area where monolithic architectures often have an advantage, as they can more easily maintain strong consistency across the application.
+
+## Service Creation Decision
+
+For guidance on when to create new services or extend existing ones, see [[When to create or extend a service]].
+
+## Architecture Comparison
 
 | Dimension                | Monolithic Architecture                                                                            | Microservices Architecture                                                                                                     |
 | ------------------------ | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |

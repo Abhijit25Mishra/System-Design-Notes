@@ -1,6 +1,9 @@
 
+# Protocol Buffers vs JSON vs XML
 
-| Feature             | Protocol Buffers ([[Protobuf]])                                                                                      | JSON (JavaScript Object Notation)                                                                                     | XML (eXtensible Markup Language)                                                            |
+A comparison of different data serialization formats and their characteristics:
+
+| Feature             | Protocol Buffers ([[ProtoBuf]])                                                                                      | JSON (JavaScript Object Notation)                                                                                     | XML (eXtensible Markup Language)                                                            |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | Format Type         | Binary                                                                                                               | Text-based                                                                                                            | Text-based                                                                                  |
 | Performance (Speed) | Very fast serialization/deserialization; up to 6x faster than JSON in server-to-server contexts.                     | Slower than Protobuf due to text parsing overhead.                                                                    | Generally the slowest due to high verbosity and complex parsing rules.                      |
