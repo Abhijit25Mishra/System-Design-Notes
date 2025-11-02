@@ -22,7 +22,7 @@
     
     
       
-        <title>Inter Service Communication - System Design Notes</title>
+        <title>Inter-Service Communication - System Design Notes</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#inter-service-communication" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inter Service Communication
+              Inter-Service Communication
             
           </span>
         </div>
@@ -221,7 +226,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
@@ -278,6 +285,26 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
     
@@ -288,8 +315,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -298,8 +326,14 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
@@ -308,27 +342,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Distributed Systems
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -343,7 +356,7 @@
   
   
   <span class="md-ellipsis">
-    Architectural choice
+    Architectural Choices
     
   </span>
   
@@ -366,7 +379,7 @@
   
   
   <span class="md-ellipsis">
-    Database per Service pattern
+    Database per Service Pattern
     
   </span>
   
@@ -436,13 +449,15 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Inter Service Communication
+    Inter-Service Communication
     
   </span>
   
@@ -466,7 +481,7 @@
   
   
   <span class="md-ellipsis">
-    SAGA pattern
+    SAGA Pattern
     
   </span>
   
@@ -489,7 +504,7 @@
   
   
   <span class="md-ellipsis">
-    When to create or extend a service
+    When to Create or Extend a Service
     
   </span>
   
@@ -515,6 +530,26 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
     
@@ -525,8 +560,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ProtoBuf/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -535,8 +571,14 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
@@ -545,27 +587,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ProtoBuf/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    ProtoBuf
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -580,7 +601,7 @@
   
   
   <span class="md-ellipsis">
-    Best Practices for Protobuf
+    Best Practices for Protocol Buffers
     
   </span>
   
@@ -603,53 +624,7 @@
   
   
   <span class="md-ellipsis">
-    Interface Definition Language
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ProtoBuf/ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    ProtoBuf VS JSON VS XML
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ProtoBuf/ProtoBuf%20Workflow/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    ProtoBuf Workflow
+    Interface Definition Language (IDL)
     
   </span>
   
@@ -673,6 +648,52 @@
   
   <span class="md-ellipsis">
     ProtoBuf
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProtoBuf/ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protocol Buffers vs JSON vs XML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProtoBuf/ProtoBuf%20Workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protocol Buffer Workflow
     
   </span>
   
@@ -718,7 +739,7 @@
   
   
   <span class="md-ellipsis">
-    Serializing and Deserializing in ProtoBuf
+    Serializing and Deserializing in Protocol Buffers
     
   </span>
   
@@ -743,22 +764,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -776,16 +781,25 @@
   
 
 
-  <h1>Inter Service Communication</h1>
-
+<h1 id="inter-service-communication">Inter-Service Communication<a class="headerlink" href="#inter-service-communication" title="Permanent link">&para;</a></h1>
 <p>The way microservices communicate is a defining characteristic of the [[Architectural choice|architecture]], directly influencing performance, coupling, and resilience. A well-designed system often employs a mix of communication styles, choosing the right protocol for each specific interaction.</p>
-<p>there are mainly 2 different types of communication
-1. Synchronous Communication: Direct Request/Response
-    1. REST over HTTP (Most used) : simple, less complexity, json, stateless, wide support, readable, bad performance. 
-    2. gRPC : more complex, [[protobuf]], binary format (not readable), great performace 
-2. Asynchronous Communication: Event-Driven Architecture
-    1. Message Queues (RabbitMQ, Amazon SQS): This model is typically used for command-based communication, where a message represents a task to be performed. A producer sends a message to a specific queue, and a single consumer from a group of workers retrieves and processes that message. This pattern is excellent for distributing workloads, ensuring reliable task processing, and implementing load leveling to smooth out traffic spikes.
-    2. Event Streams / Publish - Suscribe (Apache kafka, Amazon SNS) : This model is the foundation of event-driven architectures and is used for broadcasting information. A producer service publishes an event—a record of something that has happened—to a topic. Any number of consumer services can subscribe to that topic and will receive a copy of the event to react to it independently. This pattern is ideal for notifying multiple parts of a system about a state change, such as an OrderPlaced or UserRegistered event. </p>
+<p>There are mainly two different types of communication:</p>
+<ol>
+<li>
+<p><strong>Synchronous Communication</strong>: Direct Request/Response</p>
+<ul>
+<li><strong>REST over HTTP</strong> (Most used): Simple, less complexity, JSON, stateless, wide support, readable, lower performance</li>
+<li><strong>gRPC</strong>: More complex, [[protobuf]], binary format (not readable), great performance</li>
+</ul>
+</li>
+<li>
+<p><strong>Asynchronous Communication</strong>: Event-Driven Architecture</p>
+<ul>
+<li><strong>Message Queues</strong> (RabbitMQ, Amazon SQS): This model is typically used for command-based communication, where a message represents a task to be performed. A producer sends a message to a specific queue, and a single consumer from a group of workers retrieves and processes that message. This pattern is excellent for distributing workloads, ensuring reliable task processing, and implementing load leveling to smooth out traffic spikes.</li>
+<li><strong>Event Streams / Publish-Subscribe</strong> (Apache Kafka, Amazon SNS): This model is the foundation of event-driven architectures and is used for broadcasting information. A producer service publishes an event—a record of something that has happened—to a topic. Any number of consumer services can subscribe to that topic and will receive a copy of the event to react to it independently. This pattern is ideal for notifying multiple parts of a system about a state change, such as an <code>OrderPlaced</code> or <code>UserRegistered</code> event.</li>
+</ul>
+</li>
+</ol>
 <p>Asynchronous communication significantly improves system resilience and scalability. If a consumer service is temporarily unavailable, messages can be buffered in the broker and processed once the service recovers. This prevents failures from cascading. Furthermore, producers and consumers can be scaled independently based on their respective loads, and the non-blocking nature of the communication enhances the perceived responsiveness of the system. The main challenges are the added operational complexity of managing a message broker and the cognitive shift required to design and debug systems based on eventual consistency.</p>
 <p><strong>A mature microservice ecosystem is rarely built on a single communication style. Instead, it is a hybrid, where the choice of protocol is made on a link-by-link basis, tailored to the specific requirements of each interaction.</strong></p>
 <p>Table 1: Synchronous vs. Asynchronous Communication Trade-offs</p>
@@ -900,6 +914,12 @@
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
       </main>
       
         <footer class="md-footer">
@@ -955,7 +975,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "search.suggest", "content.code.copy", "content.action.edit", "header.autohide"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.indexes", "navigation.tracking", "navigation.top", "search.highlight", "search.suggest", "toc.integrate", "content.code.copy", "content.action.edit", "header.autohide"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>

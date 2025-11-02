@@ -22,7 +22,7 @@
     
     
       
-        <title>Architectural choice - System Design Notes</title>
+        <title>Architectural Choices - System Design Notes</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#monolithic-vs-microservices" class="md-skip">
+        <a href="#architectural-choices" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Architectural choice
+              Architectural Choices
             
           </span>
         </div>
@@ -226,7 +226,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
@@ -283,6 +285,26 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
     
@@ -293,8 +315,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -303,8 +326,14 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
@@ -313,27 +342,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Distributed Systems
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -349,13 +357,15 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   
   <span class="md-ellipsis">
-    Architectural choice
+    Architectural Choices
     
   </span>
   
@@ -368,7 +378,7 @@
   
   
   <span class="md-ellipsis">
-    Architectural choice
+    Architectural Choices
     
   </span>
   
@@ -381,6 +391,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -389,28 +401,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#monolithic-vs-microservices" class="md-nav__link">
+  <a href="#monolithic-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Monolithic vs. Microservices
+      Monolithic Architecture
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Monolithic vs. Microservices">
+    <nav class="md-nav" aria-label="Monolithic Architecture">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#monolithic" class="md-nav__link">
+  <a href="#advantages" class="md-nav__link">
     <span class="md-ellipsis">
-      Monolithic
+      Advantages
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#microservices" class="md-nav__link">
+  <a href="#disadvantages" class="md-nav__link">
     <span class="md-ellipsis">
-      Microservices
+      Disadvantages
     </span>
   </a>
   
@@ -418,6 +430,57 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microservices-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microservices Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microservices Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advantages_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Benefits
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-creation-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Creation Decision
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture Comparison
+    </span>
+  </a>
   
 </li>
       
@@ -442,7 +505,7 @@
   
   
   <span class="md-ellipsis">
-    Database per Service pattern
+    Database per Service Pattern
     
   </span>
   
@@ -511,7 +574,7 @@
   
   
   <span class="md-ellipsis">
-    Inter Service Communication
+    Inter-Service Communication
     
   </span>
   
@@ -534,7 +597,7 @@
   
   
   <span class="md-ellipsis">
-    SAGA pattern
+    SAGA Pattern
     
   </span>
   
@@ -557,7 +620,7 @@
   
   
   <span class="md-ellipsis">
-    When to create or extend a service
+    When to Create or Extend a Service
     
   </span>
   
@@ -583,6 +646,26 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
     
@@ -593,8 +676,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ProtoBuf/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -603,8 +687,14 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
@@ -613,27 +703,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ProtoBuf/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    ProtoBuf
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -648,7 +717,7 @@
   
   
   <span class="md-ellipsis">
-    Best Practices for Protobuf
+    Best Practices for Protocol Buffers
     
   </span>
   
@@ -671,53 +740,7 @@
   
   
   <span class="md-ellipsis">
-    Interface Definition Language
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ProtoBuf/ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    ProtoBuf VS JSON VS XML
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ProtoBuf/ProtoBuf%20Workflow/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    ProtoBuf Workflow
+    Interface Definition Language (IDL)
     
   </span>
   
@@ -741,6 +764,52 @@
   
   <span class="md-ellipsis">
     ProtoBuf
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProtoBuf/ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protocol Buffers vs JSON vs XML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProtoBuf/ProtoBuf%20Workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protocol Buffer Workflow
     
   </span>
   
@@ -786,7 +855,7 @@
   
   
   <span class="md-ellipsis">
-    Serializing and Deserializing in ProtoBuf
+    Serializing and Deserializing in Protocol Buffers
     
   </span>
   
@@ -811,63 +880,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#monolithic-vs-microservices" class="md-nav__link">
-    <span class="md-ellipsis">
-      Monolithic vs. Microservices
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Monolithic vs. Microservices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#monolithic" class="md-nav__link">
-    <span class="md-ellipsis">
-      Monolithic
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#microservices" class="md-nav__link">
-    <span class="md-ellipsis">
-      Microservices
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -885,65 +897,106 @@
   
 
 
-  <h1>Architectural choice</h1>
-
-<h2 id="monolithic-vs-microservices">Monolithic vs. Microservices<a class="headerlink" href="#monolithic-vs-microservices" title="Permanent link">&para;</a></h2>
-<h4 id="monolithic">Monolithic<a class="headerlink" href="#monolithic" title="Permanent link">&para;</a></h4>
-<ul>
-<li>A single, unified codebase.</li>
-<li>All business functions are contained in a single application.</li>
-<li>All components are interdependent.</li>
-<li>The application is deployed as a single unit.</li>
-</ul>
-<p><strong>Pros:</strong></p>
+<h1 id="architectural-choices">Architectural Choices<a class="headerlink" href="#architectural-choices" title="Permanent link">&para;</a></h1>
+<p>This document compares two main architectural patterns: Monolithic and Microservices architectures.</p>
+<h2 id="monolithic-architecture">Monolithic Architecture<a class="headerlink" href="#monolithic-architecture" title="Permanent link">&para;</a></h2>
+<p>A monolithic architecture is characterized by:
+- Single, unified codebase
+- All business functions in one application
+- Interdependent components
+- Single-unit deployment</p>
+<h3 id="advantages">Advantages<a class="headerlink" href="#advantages" title="Permanent link">&para;</a></h3>
 <ol>
+<li><strong>Team Size Compatibility</strong></li>
+<li>Ideal for small-scale teams</li>
 <li>
-<p>Better for small-scale teams.</p>
+<p>Easier team coordination</p>
 </li>
 <li>
-<p>Simplicity and speed. Development is faster and deployment is straightforward.</p>
+<p><strong>Development Simplicity</strong></p>
+</li>
+<li>Faster development cycles</li>
+<li>
+<p>Straightforward deployment process</p>
 </li>
 <li>
-<p>Tracing a request is easier.</p>
+<p><strong>Request Tracing</strong></p>
 </li>
+<li>Easier to trace and debug requests</li>
+<li>Single codebase to search</li>
 </ol>
-<p><strong>Cons:</strong> As it scales, all the pros turn into cons.</p>
+<h3 id="disadvantages">Disadvantages<a class="headerlink" href="#disadvantages" title="Permanent link">&para;</a></h3>
+<p>As the application scales, advantages often become challenges:</p>
 <ol>
+<li><strong>Development Speed</strong></li>
+<li>Slower development cycles</li>
 <li>
-<p>Slow development, unintended changes.</p>
+<p>Higher risk of unintended side effects</p>
 </li>
 <li>
-<p>Scaling becomes inefficient.</p>
+<p><strong>Scaling Issues</strong></p>
+</li>
+<li>Inefficient resource utilization</li>
+<li>
+<p>Must scale entire application</p>
 </li>
 <li>
-<p>A single error can compromise the availability of the entire application.</p>
+<p><strong>Reliability Concerns</strong></p>
+</li>
+<li>Single points of failure</li>
+<li>
+<p>One error affects entire application</p>
 </li>
 <li>
-<p>New technology adoption is blocked.</p>
+<p><strong>Technology Constraints</strong></p>
 </li>
+<li>Difficult to adopt new technologies</li>
+<li>Stack decisions affect entire application</li>
 </ol>
-<h4 id="microservices">Microservices<a class="headerlink" href="#microservices" title="Permanent link">&para;</a></h4>
-<ul>
-<li>A set of applications.</li>
-<li>Independent of each other.</li>
-<li>Loosely coupled, i.e., each service handles a different business function.</li>
-<li>Communicates through APIs.</li>
-</ul>
-<p><strong>Pros:</strong></p>
+<h2 id="microservices-architecture">Microservices Architecture<a class="headerlink" href="#microservices-architecture" title="Permanent link">&para;</a></h2>
+<p>A microservices architecture consists of:
+- Multiple independent applications
+- Services operate independently
+- Loose coupling between services
+- Each service handles specific business functions
+- Communicates through APIs.</p>
+<h3 id="advantages_1">Advantages<a class="headerlink" href="#advantages_1" title="Permanent link">&para;</a></h3>
 <ol>
+<li><strong>Flexible Scaling</strong></li>
+<li>Handle distinct scaling requirements</li>
+<li>Scale services independently</li>
 <li>
-<p>Distinct scaling requirements can be handled.</p>
+<p>Optimize resource usage</p>
 </li>
 <li>
-<p>Enables technological diversity.</p>
+<p><strong>Technology Freedom</strong></p>
+</li>
+<li>Enable technological diversity</li>
+<li>Choose best tools for each service</li>
+<li>
+<p>Easier to adopt new technologies</p>
 </li>
 <li>
-<p>Dramatically improves fault isolation.</p>
+<p><strong>Improved Reliability</strong></p>
 </li>
+<li>Better fault isolation</li>
+<li>Failures don't cascade easily</li>
+<li>Higher system resilience</li>
 </ol>
-<p>Microservices solve a lot of problems that are present in a monolithic architecture. Adopting microservices is often driven by the need to scale the organization, not just the application. A large team working on a single monolithic codebase inevitably faces high coordination overhead, frequent merge conflicts, and a bottlenecked release pipeline.
-Microservices minimize cross-team communication overhead, enabling parallel development and deployment. Data consistency is one area where a monolithic architecture is often preferred, as it is easier to maintain strong consistency.</p>
-<p>[[When to create or extend a service]] ?</p>
+<h3 id="key-benefits">Key Benefits<a class="headerlink" href="#key-benefits" title="Permanent link">&para;</a></h3>
+<p>Microservices solve many problems present in monolithic architectures. The adoption is often driven by organizational scaling needs rather than just technical requirements. </p>
+<p>When working with a monolithic codebase, large teams face:
+- High coordination overhead
+- Frequent merge conflicts
+- Bottlenecked release pipeline</p>
+<p>Microservices help by:
+- Minimizing cross-team communication overhead
+- Enabling parallel development
+- Supporting independent deployment</p>
+<p>However, data consistency is one area where monolithic architectures often have an advantage, as they can more easily maintain strong consistency across the application.</p>
+<h2 id="service-creation-decision">Service Creation Decision<a class="headerlink" href="#service-creation-decision" title="Permanent link">&para;</a></h2>
+<p>For guidance on when to create new services or extend existing ones, see [[When to create or extend a service]].</p>
+<h2 id="architecture-comparison">Architecture Comparison<a class="headerlink" href="#architecture-comparison" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1015,6 +1068,12 @@ Microservices minimize cross-team communication overhead, enabling parallel deve
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
       </main>
       
         <footer class="md-footer">
@@ -1070,7 +1129,7 @@ Microservices minimize cross-team communication overhead, enabling parallel deve
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "search.suggest", "content.code.copy", "content.action.edit", "header.autohide"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.indexes", "navigation.tracking", "navigation.top", "search.highlight", "search.suggest", "toc.integrate", "content.code.copy", "content.action.edit", "header.autohide"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>

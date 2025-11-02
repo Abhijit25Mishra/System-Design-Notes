@@ -14,7 +14,7 @@
         <link rel="prev" href="../Best%20Practices%20for%20Protobuf/">
       
       
-        <link rel="next" href="../ProtoBuf%20VS%20JSON%20VS%20XML/">
+        <link rel="next" href="../ProtoBuf/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Interface Definition Language - System Design Notes</title>
+        <title>Interface Definition Language (IDL) - System Design Notes</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#idl" class="md-skip">
+        <a href="#interface-definition-language-idl" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Interface Definition Language
+              Interface Definition Language (IDL)
             
           </span>
         </div>
@@ -226,7 +226,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
@@ -281,6 +283,26 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
     
@@ -291,8 +313,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Distributed%20Systems/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -301,8 +324,14 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
@@ -311,27 +340,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Distributed%20Systems/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Distributed Systems
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -346,7 +354,7 @@
   
   
   <span class="md-ellipsis">
-    Architectural choice
+    Architectural Choices
     
   </span>
   
@@ -369,7 +377,7 @@
   
   
   <span class="md-ellipsis">
-    Database per Service pattern
+    Database per Service Pattern
     
   </span>
   
@@ -438,7 +446,7 @@
   
   
   <span class="md-ellipsis">
-    Inter Service Communication
+    Inter-Service Communication
     
   </span>
   
@@ -461,7 +469,7 @@
   
   
   <span class="md-ellipsis">
-    SAGA pattern
+    SAGA Pattern
     
   </span>
   
@@ -484,7 +492,7 @@
   
   
   <span class="md-ellipsis">
-    When to create or extend a service
+    When to Create or Extend a Service
     
   </span>
   
@@ -512,6 +520,26 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
     
@@ -522,8 +550,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -532,8 +561,14 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
@@ -542,27 +577,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    ProtoBuf
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -577,7 +591,7 @@
   
   
   <span class="md-ellipsis">
-    Best Practices for Protobuf
+    Best Practices for Protocol Buffers
     
   </span>
   
@@ -601,13 +615,15 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   
   <span class="md-ellipsis">
-    Interface Definition Language
+    Interface Definition Language (IDL)
     
   </span>
   
@@ -620,7 +636,7 @@
   
   
   <span class="md-ellipsis">
-    Interface Definition Language
+    Interface Definition Language (IDL)
     
   </span>
   
@@ -633,6 +649,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -641,23 +659,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#idl" class="md-nav__link">
-    <span class="md-ellipsis">
-      IDL
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="IDL">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#syntax" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntax:
+      Syntax
     </span>
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Naming Conventions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Naming Conventions">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#importing" class="md-nav__link">
@@ -791,12 +809,35 @@
   
   
     <li class="md-nav__item">
+      <a href="../ProtoBuf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ProtoBuf
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    ProtoBuf VS JSON VS XML
+    Protocol Buffers vs JSON vs XML
     
   </span>
   
@@ -819,30 +860,7 @@
   
   
   <span class="md-ellipsis">
-    ProtoBuf Workflow
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ProtoBuf/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    ProtoBuf
+    Protocol Buffer Workflow
     
   </span>
   
@@ -888,7 +906,7 @@
   
   
   <span class="md-ellipsis">
-    Serializing and Deserializing in ProtoBuf
+    Serializing and Deserializing in Protocol Buffers
     
   </span>
   
@@ -913,165 +931,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#idl" class="md-nav__link">
-    <span class="md-ellipsis">
-      IDL
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="IDL">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#syntax" class="md-nav__link">
-    <span class="md-ellipsis">
-      Syntax:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#importing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Importing:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#field-numbertag" class="md-nav__link">
-    <span class="md-ellipsis">
-      Field Number/Tag
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Field Number/Tag">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#syntax_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Syntax:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#uniqueness-and-immutability" class="md-nav__link">
-    <span class="md-ellipsis">
-      Uniqueness and Immutability:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#performance-implications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Performance Implications:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#field-cardinality" class="md-nav__link">
-    <span class="md-ellipsis">
-      Field Cardinality
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#services-for-rpc" class="md-nav__link">
-    <span class="md-ellipsis">
-      Services for RPC
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Services for RPC">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#syntax_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Syntax:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rpc-methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      RPC Methods:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#streaming" class="md-nav__link">
-    <span class="md-ellipsis">
-      Streaming:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1089,52 +948,46 @@
   
 
 
-  <h1>Interface Definition Language</h1>
-
-<h2 id="idl">IDL<a class="headerlink" href="#idl" title="Permanent link">&para;</a></h2>
+<h1 id="interface-definition-language-idl">Interface Definition Language (IDL)<a class="headerlink" href="#interface-definition-language-idl" title="Permanent link">&para;</a></h1>
 <p>The fundamental unit of data structure in [[Protobuf]] is the message. A message is a logical record of information, analogous to a class in Java or a struct in C++ or Go.</p>
-<h3 id="syntax">Syntax:<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h3>
-<p>A message is declared using the message keyword, followed by its name and a pair of curly braces enclosing its field definitions.29</p>
-<p>```Protocol Buffers
-message SongRequest {<br />
-  string song_name = 1;<br />
-  int64 artist_id = 2;<br />
-}<br />
-<div class="highlight"><pre><span></span><code>### Naming Conventions:
-
-The official Protobuf style guide recommends using **TitleCase**  **for message names** and **lower_snake_case for field names**. Following these conventions ensures that the generated code is idiomatic in the target languages, as the compiler often transforms lower_snake_case into the conventional style of the target language (e.g., camelCase in Java).
-
-### Nested Messages:
-
-Messages can be defined within the scope of other messages. This is useful for grouping related data structures and creating a logical namespace.
-
-```Protocol Buffers
-
-message SearchResponse {  
+<h2 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h2>
+<p>A message is declared using the <code>message</code> keyword, followed by its name and a pair of curly braces enclosing its field definitions.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">message</span><span class="w"> </span><span class="nc">SongRequest</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">string</span><span class="w"> </span><span class="na">song_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int64</span><span class="w"> </span><span class="na">artist_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="naming-conventions">Naming Conventions<a class="headerlink" href="#naming-conventions" title="Permanent link">&para;</a></h2>
+<p>The official Protobuf style guide recommends using:
+- <code>TitleCase</code> for message names
+- <code>lower_snake_case</code> for field names</p>
+<p>Following these conventions ensures that the generated code is idiomatic in the target languages, as the compiler often transforms <code>lower_snake_case</code> into the conventional style of the target language (e.g., <code>camelCase</code> in Java).### Nested Messages:</p>
+<p>Messages can be defined within the scope of other messages. This is useful for grouping related data structures and creating a logical namespace.</p>
+<div class="highlight"><pre><span></span><code>message SearchResponse {  
   message Result {  
     string url = 1;  
     string title = 2;  
   }  
   repeated Result results = 1;  
 }  
-</code></pre></div></p>
+</code></pre></div>
 <p>Here, Result is a nested message type that can only be accessed within the context of SearchResponse (e.g., SearchResponse.Result in generated code).</p>
 <h3 id="importing">Importing:<a class="headerlink" href="#importing" title="Permanent link">&para;</a></h3>
 <p>Messages can be defined out of the scope of the message, i.e in a different file, this can be later imported into the required message. </p>
 <blockquote>
 <p><strong>result.proto</strong>
-```Protocol Buffers
-syntax = "proto3";</p>
-</blockquote>
-<p>package search;</p>
-<p>// Define Result independently
+<div class="highlight"><pre><span></span><code>syntax = &quot;proto3&quot;;
+
+package search;
+
+// Define Result independently
 message Result {
   string url = 1;
   string title = 2;
 }
-<div class="highlight"><pre><span></span><code>&gt; **search_response.proto**
-``` Protocol Buffers
-syntax = &quot;proto3&quot;;
+</code></pre></div></p>
+<p><strong>search_response.proto</strong>
+<div class="highlight"><pre><span></span><code>syntax = &quot;proto3&quot;;
 
 package search;
 
@@ -1144,6 +997,7 @@ message SearchResponse {
   repeated Result results = 1; // Use it directly since it shares the same package
 }
 </code></pre></div></p>
+</blockquote>
 <h2 id="field-numbertag">Field Number/Tag<a class="headerlink" href="#field-numbertag" title="Permanent link">&para;</a></h2>
 <h3 id="syntax_1">Syntax:<a class="headerlink" href="#syntax_1" title="Permanent link">&para;</a></h3>
 <p>Every field in a message must be assigned a unique positive integer number.</p>
@@ -1187,7 +1041,7 @@ message SearchResponse {
 <p><strong>In addition to defining data structures, .proto files are the standard way to define service interfaces for RPC frameworks like gRPC.</strong></p>
 <h3 id="syntax_2">Syntax:<a class="headerlink" href="#syntax_2" title="Permanent link">&para;</a></h3>
 <p>A service is defined using the service keyword, containing a list of rpc methods.  </p>
-<p><code>Protocol Buffers  
+<p><code>Protocol  
 service SearchService {  
   rpc Search(SearchRequest) returns (SearchResponse);  
 }</code> </p>
@@ -1227,6 +1081,12 @@ service SearchService {
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -1283,7 +1143,7 @@ service SearchService {
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "search.suggest", "content.code.copy", "content.action.edit", "header.autohide"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.indexes", "navigation.tracking", "navigation.top", "search.highlight", "search.suggest", "toc.integrate", "content.code.copy", "content.action.edit", "header.autohide"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>

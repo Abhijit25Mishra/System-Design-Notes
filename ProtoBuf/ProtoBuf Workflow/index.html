@@ -14,7 +14,7 @@
         <link rel="prev" href="../ProtoBuf%20VS%20JSON%20VS%20XML/">
       
       
-        <link rel="next" href="../ProtoBuf/">
+        <link rel="next" href="../Protoc%20Compiler/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>ProtoBuf Workflow - System Design Notes</title>
+        <title>Protocol Buffer Workflow - System Design Notes</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#proto-file" class="md-skip">
+        <a href="#protocol-buffer-workflow" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ProtoBuf Workflow
+              Protocol Buffer Workflow
             
           </span>
         </div>
@@ -226,7 +226,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
@@ -281,6 +283,26 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
     
@@ -291,8 +313,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Distributed%20Systems/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -301,8 +324,14 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
@@ -311,27 +340,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Distributed%20Systems/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Distributed Systems
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -346,7 +354,7 @@
   
   
   <span class="md-ellipsis">
-    Architectural choice
+    Architectural Choices
     
   </span>
   
@@ -369,7 +377,7 @@
   
   
   <span class="md-ellipsis">
-    Database per Service pattern
+    Database per Service Pattern
     
   </span>
   
@@ -438,7 +446,7 @@
   
   
   <span class="md-ellipsis">
-    Inter Service Communication
+    Inter-Service Communication
     
   </span>
   
@@ -461,7 +469,7 @@
   
   
   <span class="md-ellipsis">
-    SAGA pattern
+    SAGA Pattern
     
   </span>
   
@@ -484,7 +492,7 @@
   
   
   <span class="md-ellipsis">
-    When to create or extend a service
+    When to Create or Extend a Service
     
   </span>
   
@@ -512,6 +520,26 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
     
@@ -522,8 +550,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -532,8 +561,14 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
@@ -542,27 +577,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    ProtoBuf
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -577,7 +591,7 @@
   
   
   <span class="md-ellipsis">
-    Best Practices for Protobuf
+    Best Practices for Protocol Buffers
     
   </span>
   
@@ -600,105 +614,12 @@
   
   
   <span class="md-ellipsis">
-    Interface Definition Language
+    Interface Definition Language (IDL)
     
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    ProtoBuf VS JSON VS XML
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    ProtoBuf Workflow
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    ProtoBuf Workflow
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#proto-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      .proto file
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -722,6 +643,118 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protocol Buffers vs JSON vs XML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Protocol Buffer Workflow
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protocol Buffer Workflow
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-proto-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      The .proto File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The .proto File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -762,7 +795,7 @@
   
   
   <span class="md-ellipsis">
-    Serializing and Deserializing in ProtoBuf
+    Serializing and Deserializing in Protocol Buffers
     
   </span>
   
@@ -787,39 +820,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#proto-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      .proto file
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -837,16 +837,37 @@
   
 
 
-  <h1>ProtoBuf Workflow</h1>
-
+<h1 id="protocol-buffer-workflow">Protocol Buffer Workflow<a class="headerlink" href="#protocol-buffer-workflow" title="Permanent link">&para;</a></h1>
 <p>[[ProtoBuf]] workflow fundamentally shifts development from a "code-first" to a "contract-first" paradigm, a change with significant implications for team collaboration and system architecture.</p>
-<h2 id="proto-file">.proto file<a class="headerlink" href="#proto-file" title="Permanent link">&para;</a></h2>
-<p>The entire Protobuf workflow originates from a single artifact: the .proto file. This plain text file serves as the definitive contract, or schema, for the data being exchanged. It contains language-agnostic definitions of data structures, known as messages, and optionally, the interfaces for remote services, known as services. This file is the central point of agreement between different components of a distributed system, such as a client and a server. It is managed as a source code asset, version-controlled, and serves as the single source of truth for the API contract.</p>
-<p>The basic structure of a .proto file includes several key components:
-- Syntax/Edition Declaration: The first non-comment line must declare the version of the Protobuf language being used, for example, syntax = "proto3"; or edition = "2023";.
-- Package Declaration: A package declaration (e.g., package tutorial;) helps prevent naming conflicts between different projects and provides a namespace.
-- Options: Language-specific option directives can be used to control how code is generated. For instance, option java_package = "com.example.tutorial"; specifies the Java package for the generated classes.
-- Message Definitions: The core of the file, where message blocks define the structure of the data, including field names, types, and unique numbers.</p>
+<h2 id="the-proto-file">The .proto File<a class="headerlink" href="#the-proto-file" title="Permanent link">&para;</a></h2>
+<p>The entire Protocol Buffer workflow originates from a single artifact: the <code>.proto</code> file. This plain text file serves as the definitive contract, or schema, for the data being exchanged. It contains language-agnostic definitions of data structures (known as messages) and optionally, the interfaces for remote services (known as services).</p>
+<p>This file is the central point of agreement between different components of a distributed system, such as a client and a server. It is managed as a source code asset, version-controlled, and serves as the single source of truth for the API contract.</p>
+<h3 id="key-components">Key Components<a class="headerlink" href="#key-components" title="Permanent link">&para;</a></h3>
+<p>The basic structure of a <code>.proto</code> file includes several key components:</p>
+<ol>
+<li>
+<p><strong>Syntax/Edition Declaration</strong>: The first non-comment line must declare the version of the Protocol Buffer language being used, for example:
+   <div class="highlight"><pre><span></span><code><span class="k">syntax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;proto3&quot;</span><span class="p">;</span>
+</code></pre></div>
+   or
+   <div class="highlight"><pre><span></span><code><span class="na">edition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;2023&quot;</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Package Declaration</strong>: A package declaration helps prevent naming conflicts between different projects and provides a namespace:
+   <div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">tutorial</span><span class="p">;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Options</strong>: Language-specific option directives can be used to control how code is generated. For instance:
+   <div class="highlight"><pre><span></span><code><span class="k">option</span><span class="w"> </span><span class="na">java_package</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;com.example.tutorial&quot;</span><span class="p">;</span>
+</code></pre></div>
+   This specifies the Java package for the generated classes.</p>
+</li>
+<li>
+<p><strong>Message Definitions</strong>: The core of the file, where message blocks define the structure of the data, including field names, types, and unique numbers.</p>
+</li>
+</ol>
 <p>By centralizing the API definition in this way, the .proto file becomes the focal point for design reviews and collaboration. Teams can agree on the contract before writing any implementation code, which decouples the interface from the implementation and facilitates parallel development. This "contract-first" approach significantly reduces integration errors and creates a system that is inherently self-documenting, with the .proto file acting as formal, machine-readable documentation.</p>
 
 
@@ -867,6 +888,12 @@
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -923,7 +950,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "search.suggest", "content.code.copy", "content.action.edit", "header.autohide"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.indexes", "navigation.tracking", "navigation.top", "search.highlight", "search.suggest", "toc.integrate", "content.code.copy", "content.action.edit", "header.autohide"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>

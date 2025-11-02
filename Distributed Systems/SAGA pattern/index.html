@@ -22,7 +22,7 @@
     
     
       
-        <title>SAGA pattern - System Design Notes</title>
+        <title>SAGA Pattern - System Design Notes</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#saga-pattern" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SAGA pattern
+              SAGA Pattern
             
           </span>
         </div>
@@ -221,7 +226,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
@@ -278,6 +285,26 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
     
@@ -288,8 +315,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -298,8 +326,14 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
@@ -308,27 +342,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Distributed Systems
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -343,7 +356,7 @@
   
   
   <span class="md-ellipsis">
-    Architectural choice
+    Architectural Choices
     
   </span>
   
@@ -366,7 +379,7 @@
   
   
   <span class="md-ellipsis">
-    Database per Service pattern
+    Database per Service Pattern
     
   </span>
   
@@ -435,7 +448,7 @@
   
   
   <span class="md-ellipsis">
-    Inter Service Communication
+    Inter-Service Communication
     
   </span>
   
@@ -459,18 +472,94 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    SAGA Pattern
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    SAGA pattern
+    SAGA Pattern
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#handling-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling Failures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Approaches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Approaches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-choreography" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Choreography
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-orchestration" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Orchestration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -489,7 +578,7 @@
   
   
   <span class="md-ellipsis">
-    When to create or extend a service
+    When to Create or Extend a Service
     
   </span>
   
@@ -515,6 +604,26 @@
   
     
     
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
     
@@ -525,8 +634,9 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ProtoBuf/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
@@ -535,8 +645,14 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
@@ -545,27 +661,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ProtoBuf/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    ProtoBuf
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -580,7 +675,7 @@
   
   
   <span class="md-ellipsis">
-    Best Practices for Protobuf
+    Best Practices for Protocol Buffers
     
   </span>
   
@@ -603,53 +698,7 @@
   
   
   <span class="md-ellipsis">
-    Interface Definition Language
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ProtoBuf/ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    ProtoBuf VS JSON VS XML
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ProtoBuf/ProtoBuf%20Workflow/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    ProtoBuf Workflow
+    Interface Definition Language (IDL)
     
   </span>
   
@@ -673,6 +722,52 @@
   
   <span class="md-ellipsis">
     ProtoBuf
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProtoBuf/ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protocol Buffers vs JSON vs XML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProtoBuf/ProtoBuf%20Workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protocol Buffer Workflow
     
   </span>
   
@@ -718,7 +813,7 @@
   
   
   <span class="md-ellipsis">
-    Serializing and Deserializing in ProtoBuf
+    Serializing and Deserializing in Protocol Buffers
     
   </span>
   
@@ -743,22 +838,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -776,19 +855,34 @@
   
 
 
-  <h1>SAGA pattern</h1>
-
-<p>To address the challenge of distributed transactions, the Saga pattern is the most common solution for managing data consistency across services. A saga is a sequence of local transactions that are coordinated to execute a complete business process. Each step in the saga is a local, atomic transaction within a single service. Upon successful completion, it triggers the next step in the sequence, typically by publishing an event or sending a command.</p>
-<p>The key to the Saga pattern's atomicity is its handling of failures. If any local transaction in the sequence fails, the saga executes a series of compensating transactions to undo the work of the preceding, successfully completed steps. For example, if a CreateOrder saga involves ProcessPayment, UpdateInventory, and CreateShipment, and the CreateShipment step fails, compensating transactions for RefundPayment and RestoreInventory would be executed. This approach does not provide the immediate consistency of an ACID transaction but instead achieves eventual consistency, where the system converges to a consistent state over time.</p>
+<h1 id="saga-pattern">SAGA Pattern<a class="headerlink" href="#saga-pattern" title="Permanent link">&para;</a></h1>
+<p>The SAGA pattern is the most common solution for managing data consistency across services in distributed systems. A saga is a sequence of local transactions that are coordinated to execute a complete business process. Each step in the saga is a local, atomic transaction within a single service. Upon successful completion, it triggers the next step in the sequence, typically by publishing an event or sending a command.</p>
+<h2 id="handling-failures">Handling Failures<a class="headerlink" href="#handling-failures" title="Permanent link">&para;</a></h2>
+<p>The key to the SAGA pattern's atomicity is its handling of failures. If any local transaction in the sequence fails, the saga executes a series of compensating transactions to undo the work of the preceding, successfully completed steps. </p>
+<p>For example, if a <code>CreateOrder</code> saga involves:
+1. <code>ProcessPayment</code>
+2. <code>UpdateInventory</code>
+3. <code>CreateShipment</code></p>
+<p>And the <code>CreateShipment</code> step fails, compensating transactions for:
+- <code>RefundPayment</code>
+- <code>RestoreInventory</code></p>
+<p>would be executed. This approach does not provide the immediate consistency of an ACID transaction but instead achieves eventual consistency, where the system converges to a consistent state over time.</p>
+<h2 id="implementation-approaches">Implementation Approaches<a class="headerlink" href="#implementation-approaches" title="Permanent link">&para;</a></h2>
 <p>There are two primary approaches to implementing sagas:</p>
-<ol>
-<li>
-<p><strong>Choreography</strong>: This is a decentralized approach where services communicate directly with each other by publishing and subscribing to events. There is no central coordinator.</p>
-</li>
-<li>
-<p><strong>Orchestration</strong>: This is a centralized approach where a dedicated orchestrator service is responsible for managing the entire saga. The orchestrator sends commands to each participant service, waits for a reply, and decides the next step in the workflow. If a step fails, the orchestrator is responsible for triggering the necessary compensating transactions. This approach is easier to monitor and manage for complex workflows but introduces the orchestrator as a potential single point of failure and creates a degree of coupling between the participant services and the orchestrator.</p>
-</li>
-</ol>
+<h3 id="1-choreography">1. Choreography<a class="headerlink" href="#1-choreography" title="Permanent link">&para;</a></h3>
+<p>This is a decentralized approach where:
+- Services communicate directly with each other
+- Communication happens through publishing and subscribing to events
+- No central coordinator is needed</p>
+<h3 id="2-orchestration">2. Orchestration<a class="headerlink" href="#2-orchestration" title="Permanent link">&para;</a></h3>
+<p>This is a centralized approach where:
+- A dedicated orchestrator service manages the entire saga
+- The orchestrator sends commands to each participant service
+- It waits for replies and decides the next steps in the workflow
+- If a step fails, the orchestrator triggers the necessary compensating transactions</p>
+<p>The orchestration approach is easier to monitor and manage for complex workflows but has two main drawbacks:
+- Introduces the orchestrator as a potential single point of failure
+- Creates a degree of coupling between the participant services and the orchestrator</p>
 
 
 
@@ -808,6 +902,12 @@
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -864,7 +964,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "search.suggest", "content.code.copy", "content.action.edit", "header.autohide"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.indexes", "navigation.tracking", "navigation.top", "search.highlight", "search.suggest", "toc.integrate", "content.code.copy", "content.action.edit", "header.autohide"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
