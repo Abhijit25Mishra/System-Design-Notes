@@ -1,9 +1,5 @@
-title: Distributed Systems
-arrange:
-  - Architectural choice.md
-  - Database per Service pattern.md
-  - Domain Driven Design.md
-  - Event Sourcing.md
-  - Inter Service Communication.md
-  - SAGA pattern.md
-  - When to create or extend a service.md
+# Distributed Systems
+
+This section collects architecture patterns, DDD notes, event sourcing and communication patterns.
+
+Use the left navigation to jump to any article in this category.

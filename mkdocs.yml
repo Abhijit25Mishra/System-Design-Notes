@@ -3,36 +3,15 @@ site_url: https://abhijit25mishra.github.io/System-Design-Notes
 docs_dir: docs
 site_dir: site
 
-# ─── THEME ──────────────────────────────────────────────
 theme:
   name: material
-  features:
-    - navigation.instant
-    - navigation.expand          # Collapsible folders
-    - navigation.sections
-    - navigation.tabs            # Top-level tabs
-    - navigation.tabs.sticky     # Tabs stay visible while scrolling
-    - navigation.top             # Adds “Back to top” button
-    - navigation.tracking
-    - header.autohide
-    - navigation.footer
-    - search.highlight
-    - search.suggest
-    - content.code.copy          # Copy button on code blocks
-    - content.action.edit        # “Edit this page” link
-    - content.tooltips
-    - content.anchors
-    - toc.integrate
-
   palette:
-    # Light mode
     - scheme: default
       primary: green
       accent: lime
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
-    # Dark mode
     - scheme: slate
       primary: green
       accent: lime
@@ -40,43 +19,76 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
 
+  # Important features to get Kubernetes-like sidebar behavior
+  features:
+    - navigation.instant
+    - navigation.expand        # collapsible caret arrows in the left nav
+    - navigation.sections      # groups under headings
+    - navigation.indexes       # treat folders as category indexes
+    - navigation.tracking
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - toc.integrate
+    - content.code.copy
+    - content.action.edit
+
   font:
     text: Inter
     code: JetBrains Mono
 
-# ─── REPOSITORY LINKS ───────────────────────────────────
 repo_url: https://github.com/abhijit25mishra/System-Design-Notes
 repo_name: GitHub
 edit_uri: edit/main/docs/
 
-# ─── PLUGINS ────────────────────────────────────────────
 plugins:
+  - search
+  - awesome-pages
   - group:
       enabled: true
       plugins:
         - search
-        - awesome-pages
 
-# ─── MARKDOWN ENHANCEMENTS ──────────────────────────────
-markdown_extensions:
-  - admonition
-  - codehilite
-  - footnotes
-  - toc:
-      permalink: true
-  - pymdownx.details
-  - pymdownx.emoji
-  - pymdownx.superfences
-  - pymdownx.tasklist
-  - pymdownx.highlight
-  - pymdownx.inlinehilite
-  - pymdownx.magiclink
-  - pymdownx.snippets
-
-# ─── EXTRA SETTINGS ─────────────────────────────────────
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/abhijit25mishra
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/abhijit25mishra/
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+  - pymdownx.magiclink
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+
+# Explicit nav ensures the left sidebar always lists all top-level categories
+nav:
+  - Home: index.md
+  - Distributed Systems:
+      - Overview: "Distributed Systems/index.md"
+      - Architectural choice: "Distributed Systems/Architectural choice.md"
+      - Database per Service pattern: "Distributed Systems/Database per Service pattern.md"
+      - Domain Driven Design: "Distributed Systems/Domain Driven Design.md"
+      - Event Sourcing: "Distributed Systems/Event Sourcing.md"
+      - Inter Service Communication: "Distributed Systems/Inter Service Communication.md"
+      - SAGA pattern: "Distributed Systems/SAGA pattern.md"
+      - When to create or extend a service: "Distributed Systems/When to create or extend a service.md"
+  - ProtoBuf:
+      - Overview: "ProtoBuf/index.md"
+      - Best Practices for Protobuf: "ProtoBuf/Best Practices for Protobuf.md"
+      - Interface Definition Language: "ProtoBuf/Interface Definition Language.md"
+      - ProtoBuf: "ProtoBuf/ProtoBuf.md"
+      - ProtoBuf VS JSON VS XML: "ProtoBuf/ProtoBuf VS JSON VS XML.md"
+      - ProtoBuf Workflow: "ProtoBuf/ProtoBuf Workflow.md"
+      - Protoc Compiler: "ProtoBuf/Protoc Compiler.md"
+      - Serializing and Deserializing in ProtoBuf: "ProtoBuf/Serializing and Deserializing in ProtoBuf.md"
