@@ -2,9 +2,14 @@ site_name: System Design Notes
 site_url: https://abhijit25mishra.github.io/System-Design-Notes
 docs_dir: docs
 site_dir: site
+use_directory_urls: true
 
 theme:
   name: material
+  font:
+    text: Inter
+    code: JetBrains Mono
+
   palette:
     - scheme: default
       primary: green
@@ -19,12 +24,11 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
 
-  # Important features to get Kubernetes-like sidebar behavior
   features:
     - navigation.instant
-    - navigation.expand        # collapsible caret arrows in the left nav
-    - navigation.sections      # groups under headings
-    - navigation.indexes       # treat folders as category indexes
+    - navigation.expand        # enables collapsible caret arrows
+    - navigation.sections
+    - navigation.indexes       # folders behave as category index pages
     - navigation.tracking
     - navigation.top
     - search.highlight
@@ -32,22 +36,15 @@ theme:
     - toc.integrate
     - content.code.copy
     - content.action.edit
-
-  font:
-    text: Inter
-    code: JetBrains Mono
+    - header.autohide
 
 repo_url: https://github.com/abhijit25mishra/System-Design-Notes
 repo_name: GitHub
 edit_uri: edit/main/docs/
 
 plugins:
-  - search
   - awesome-pages
-  - group:
-      enabled: true
-      plugins:
-        - search
+  - search
 
 extra:
   social:
@@ -71,7 +68,6 @@ markdown_extensions:
       custom_checkbox: true
   - attr_list
 
-# Explicit nav ensures the left sidebar always lists all top-level categories
 nav:
   - Home: index.md
   - Distributed Systems:
