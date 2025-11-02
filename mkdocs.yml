@@ -26,9 +26,9 @@ theme:
 
   features:
     - navigation.instant
-    - navigation.expand        # enables collapsible caret arrows
+    - navigation.expand      # This will now work as expected
     - navigation.sections
-    - navigation.indexes       # folders behave as category index pages
+    # - navigation.indexes  <- REMOVED this feature
     - navigation.tracking
     - navigation.top
     - search.highlight
@@ -43,7 +43,7 @@ repo_name: GitHub
 edit_uri: edit/main/docs/
 
 plugins:
-  - awesome-pages
+  # - awesome-pages  <- REMOVED this plugin
   - search
 
 extra:
