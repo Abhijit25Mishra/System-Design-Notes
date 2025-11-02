@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Distributed Systems/README.md",
+                "file": "docs/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Distributed Systems/README.md",
+                "file": "docs/README.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/Distributed Systems/README.md",
+                "file": "docs/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -171,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/Distributed Systems/README.md",
+                "file": "docs/README.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
@@ -238,7 +238,7 @@
   "active": "247c65cde6556caf",
   "lastOpenFiles": [
     "docs/Distributed Systems/Architectural choice.md",
-    "docs/Distributed Systems/README.md",
+    "docs/README.md",
     "docs/ProtoBuf/Protoc Compiler.md",
     "docs/Distributed Systems",
     "docs/ProtoBuf/ProtoBuf VS JSON VS XML.md",
