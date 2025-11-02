@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://abhijit25mishra.github.io/System-Design-Notes/ProtoBuf/ProtoBuf%20Workflow/">
+        <link rel="canonical" href="https://abhijit25mishra.github.io/System-Design-Notes/ProtoBuf/">
       
       
-        <link rel="prev" href="../ProtoBuf%20VS%20JSON%20VS%20XML/">
+        <link rel="prev" href="../Distributed%20Systems/When%20to%20create%20or%20extend%20a%20service/">
       
       
-        <link rel="next" href="../ProtoBuf/">
+        <link rel="next" href="Best%20Practices%20for%20Protobuf/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
-        <title>ProtoBuf Workflow - System Design Notes</title>
+        <title>ProtoBuf - System Design Notes</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,11 +73,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#proto-file" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -90,7 +85,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="System Design Notes" class="md-header__button md-logo" aria-label="System Design Notes" data-md-component="logo">
+    <a href=".." title="System Design Notes" class="md-header__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ProtoBuf Workflow
+              ProtoBuf
             
           </span>
         </div>
@@ -217,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href=".." class="md-tabs__link">
         
   
   
@@ -238,7 +233,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Distributed%20Systems/" class="md-tabs__link">
+        <a href="../Distributed%20Systems/" class="md-tabs__link">
           
   
   
@@ -260,7 +255,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -302,7 +297,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
+    <a href=".." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -332,7 +327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -399,7 +394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Distributed%20Systems/" class="md-nav__link">
+      <a href="../Distributed%20Systems/" class="md-nav__link">
         
   
   
@@ -422,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Distributed%20Systems/Architectural%20choice/" class="md-nav__link">
+      <a href="../Distributed%20Systems/Architectural%20choice/" class="md-nav__link">
         
   
   
@@ -445,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Distributed%20Systems/Database%20per%20Service%20pattern/" class="md-nav__link">
+      <a href="../Distributed%20Systems/Database%20per%20Service%20pattern/" class="md-nav__link">
         
   
   
@@ -468,7 +463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Distributed%20Systems/Domain%20Driven%20Design/" class="md-nav__link">
+      <a href="../Distributed%20Systems/Domain%20Driven%20Design/" class="md-nav__link">
         
   
   
@@ -491,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Distributed%20Systems/Event%20Sourcing/" class="md-nav__link">
+      <a href="../Distributed%20Systems/Event%20Sourcing/" class="md-nav__link">
         
   
   
@@ -514,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Distributed%20Systems/Inter-Service%20Communication/" class="md-nav__link">
+      <a href="../Distributed%20Systems/Inter-Service%20Communication/" class="md-nav__link">
         
   
   
@@ -537,7 +532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Distributed%20Systems/SAGA%20pattern/" class="md-nav__link">
+      <a href="../Distributed%20Systems/SAGA%20pattern/" class="md-nav__link">
         
   
   
@@ -560,7 +555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Distributed%20Systems/When%20to%20create%20or%20extend%20a%20service/" class="md-nav__link">
+      <a href="../Distributed%20Systems/When%20to%20create%20or%20extend%20a%20service/" class="md-nav__link">
         
   
   
@@ -635,10 +630,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -649,6 +651,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -661,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Best%20Practices%20for%20Protobuf/" class="md-nav__link">
+      <a href="Best%20Practices%20for%20Protobuf/" class="md-nav__link">
         
   
   
@@ -684,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Interface%20Definition%20Language/" class="md-nav__link">
+      <a href="Interface%20Definition%20Language/" class="md-nav__link">
         
   
   
@@ -707,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
+      <a href="ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
         
   
   
@@ -727,30 +730,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    ProtoBuf Workflow
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="ProtoBuf%20Workflow/" class="md-nav__link">
         
   
   
@@ -761,33 +744,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#proto-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      .proto file
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -800,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/" class="md-nav__link">
+      <a href="ProtoBuf/" class="md-nav__link">
         
   
   
@@ -823,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Protoc%20Compiler/" class="md-nav__link">
+      <a href="Protoc%20Compiler/" class="md-nav__link">
         
   
   
@@ -846,7 +802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Serializing%20and%20Deserializing%20in%20ProtoBuf/" class="md-nav__link">
+      <a href="Serializing%20and%20Deserializing%20in%20ProtoBuf/" class="md-nav__link">
         
   
   
@@ -885,7 +841,7 @@
 
 
   
-    <a href="https://github.com/abhijit25mishra/System-Design-Notes/edit/main/docs/ProtoBuf/ProtoBuf Workflow.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/abhijit25mishra/System-Design-Notes/edit/main/docs/ProtoBuf/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -893,23 +849,26 @@
   
 
 
-  <h1>ProtoBuf Workflow</h1>
+  <h1>ProtoBuf</h1>
 
-<p>[[ProtoBuf]] workflow fundamentally shifts development from a "code-first" to a "contract-first" paradigm, a change with significant implications for team collaboration and system architecture.</p>
-<h2 id="proto-file">.proto file<a class="headerlink" href="#proto-file" title="Permanent link">&para;</a></h2>
-<p>The entire Protobuf workflow originates from a single artifact: the .proto file. This plain text file serves as the definitive contract, or schema, for the data being exchanged. It contains language-agnostic definitions of data structures, known as messages, and optionally, the interfaces for remote services, known as services. This file is the central point of agreement between different components of a distributed system, such as a client and a server. It is managed as a source code asset, version-controlled, and serves as the single source of truth for the API contract.</p>
-<p>The basic structure of a .proto file includes several key components:
-- Syntax/Edition Declaration: The first non-comment line must declare the version of the Protobuf language being used, for example, syntax = "proto3"; or edition = "2023";.
-- Package Declaration: A package declaration (e.g., package tutorial;) helps prevent naming conflicts between different projects and provides a namespace.
-- Options: Language-specific option directives can be used to control how code is generated. For instance, option java_package = "com.example.tutorial"; specifies the Java package for the generated classes.
-- Message Definitions: The core of the file, where message blocks define the structure of the data, including field names, types, and unique numbers.</p>
-<p>By centralizing the API definition in this way, the .proto file becomes the focal point for design reviews and collaboration. Teams can agree on the contract before writing any implementation code, which decouples the interface from the implementation and facilitates parallel development. This "contract-first" approach significantly reduces integration errors and creates a system that is inherently self-documenting, with the .proto file acting as formal, machine-readable documentation.</p>
-
-
+<ul>
+<li>Best Practices for Protobuf.md</li>
+<li>Interface Definition Language.md</li>
+<li>ProtoBuf.md</li>
+<li>ProtoBuf VS JSON VS XML.md</li>
+<li>ProtoBuf Workflow.md</li>
+<li>Protoc Compiler.md</li>
+<li>Serializing and Deserializing in ProtoBuf.md</li>
+</ul>
 
 
 
 
+
+
+
+  
+  
 
 
 
@@ -939,7 +898,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ProtoBuf VS JSON VS XML">
+          <a href="../Distributed%20Systems/When%20to%20create%20or%20extend%20a%20service/" class="md-footer__link md-footer__link--prev" aria-label="Previous: When to create or extend a service">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -949,20 +908,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                ProtoBuf VS JSON VS XML
+                When to create or extend a service
               </div>
             </div>
           </a>
         
         
           
-          <a href="../ProtoBuf/" class="md-footer__link md-footer__link--next" aria-label="Next: ProtoBuf">
+          <a href="Best%20Practices%20for%20Protobuf/" class="md-footer__link md-footer__link--next" aria-label="Next: Best Practices for Protobuf">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                ProtoBuf
+                Best Practices for Protobuf
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1025,10 +984,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.expand", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "header.autohide", "navigation.footer", "search.highlight", "search.suggest", "content.code.copy", "content.action.edit", "content.tooltips", "content.anchors", "toc.integrate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.expand", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "header.autohide", "navigation.footer", "search.highlight", "search.suggest", "content.code.copy", "content.action.edit", "content.tooltips", "content.anchors", "toc.integrate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
