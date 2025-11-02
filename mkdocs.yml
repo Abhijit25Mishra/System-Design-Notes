@@ -51,7 +51,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/abhijit25mishra
     - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/abhijit25mishra/
+      link: https://www.linkedin.in/abhijit25mishra/
 
 markdown_extensions:
   - admonition
@@ -67,3 +67,4 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - attr_list
+
