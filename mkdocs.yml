@@ -55,20 +55,20 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.in/abhijit25mishra/
 
-markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.highlight
-  - pymdownx.inlinehilite
-  - pymdownx.tabbed:
-      alternate_style: true
-  - toc:
-      permalink: true
-  - pymdownx.magiclink
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - attr_list
+# markdown_extensions:
+#   - admonition
+#   - pymdownx.details
+#   - pymdownx.superfences
+#   - pymdownx.highlight
+#   - pymdownx.inlinehilite
+#   - pymdownx.tabbed:
+#       alternate_style: true
+#   - toc:
+#       permalink: true
+#   - pymdownx.magiclink
+#   - pymdownx.tasklist:
+#       custom_checkbox: true
+#   - attr_list
 
 # ADDED this manual navigation block back
 # nav:

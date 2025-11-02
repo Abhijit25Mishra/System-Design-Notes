@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Distributed Systems/index.md",
+                "file": "docs/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Distributed Systems/index.md",
+                "file": "docs/index.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/Distributed Systems/index.md",
+                "file": "docs/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -171,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/Distributed Systems/index.md",
+                "file": "docs/index.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
@@ -237,8 +237,8 @@
   },
   "active": "247858b2b1b2b51c",
   "lastOpenFiles": [
-    "docs/ProtoBuf/index.md",
     "docs/Distributed Systems/index.md",
+    "docs/ProtoBuf/index.md",
     "docs/index.md",
     "docs/ProtoBuf/New Text Document.txt",
     "docs/Distributed Systems/New Text Document.txt",
