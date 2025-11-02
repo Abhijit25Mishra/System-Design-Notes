@@ -8,25 +8,25 @@
       
       
       
-        <link rel="canonical" href="https://abhijit25mishra.github.io/System-Design-Notes/SAGA%20pattern/">
+        <link rel="canonical" href="https://abhijit25mishra.github.io/System-Design-Notes/ProtoBuf/ProtoBuf%20VS%20JSON%20VS%20XML/">
       
       
-        <link rel="prev" href="../Inter-Service%20Communication/">
+        <link rel="prev" href="../Interface%20Definition%20Language/">
       
       
-        <link rel="next" href="../When%20to%20create%20or%20extend%20a%20service/">
+        <link rel="next" href="../ProtoBuf%20Workflow/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
-        <title>SAGA pattern - System Design Notes</title>
+        <title>ProtoBuf VS JSON VS XML - System Design Notes</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
       
       
 
@@ -45,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -75,7 +75,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="System Design Notes" class="md-header__button md-logo" aria-label="System Design Notes" data-md-component="logo">
+    <a href="../.." title="System Design Notes" class="md-header__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SAGA pattern
+              ProtoBuf VS JSON VS XML
             
           </span>
         </div>
@@ -175,7 +175,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
+    <a href="../.." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -193,7 +193,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -215,7 +215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Architectural%20choice/" class="md-nav__link">
+      <a href="../../Architectural%20choice/" class="md-nav__link">
         
   
   
@@ -237,7 +237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Database%20per%20Service%20pattern/" class="md-nav__link">
+      <a href="../../Database%20per%20Service%20pattern/" class="md-nav__link">
         
   
   
@@ -259,7 +259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Domain%20Driven%20Design/" class="md-nav__link">
+      <a href="../../Domain%20Driven%20Design/" class="md-nav__link">
         
   
   
@@ -281,7 +281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Event%20Sourcing/" class="md-nav__link">
+      <a href="../../Event%20Sourcing/" class="md-nav__link">
         
   
   
@@ -303,7 +303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Inter-Service%20Communication/" class="md-nav__link">
+      <a href="../../Inter-Service%20Communication/" class="md-nav__link">
         
   
   
@@ -322,17 +322,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../SAGA%20pattern/" class="md-nav__link">
         
   
   
@@ -343,7 +336,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -355,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../When%20to%20create%20or%20extend%20a%20service/" class="md-nav__link">
+      <a href="../../When%20to%20create%20or%20extend%20a%20service/" class="md-nav__link">
         
   
   
@@ -374,8 +366,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -386,11 +380,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
@@ -406,7 +400,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             ProtoBuf
@@ -420,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/Interface%20Definition%20Language/" class="md-nav__link">
+      <a href="../Interface%20Definition%20Language/" class="md-nav__link">
         
   
   
@@ -440,10 +434,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ProtoBuf/ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -454,6 +455,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -466,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/ProtoBuf%20Workflow/" class="md-nav__link">
+      <a href="../ProtoBuf%20Workflow/" class="md-nav__link">
         
   
   
@@ -489,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/ProtoBuf/" class="md-nav__link">
+      <a href="../ProtoBuf/" class="md-nav__link">
         
   
   
@@ -512,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/Protoc%20Compiler/" class="md-nav__link">
+      <a href="../Protoc%20Compiler/" class="md-nav__link">
         
   
   
@@ -535,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/Serializing%20and%20Deserializing%20in%20ProtoBuf/" class="md-nav__link">
+      <a href="../Serializing%20and%20Deserializing%20in%20ProtoBuf/" class="md-nav__link">
         
   
   
@@ -590,19 +592,68 @@
 
 
 
-  <h1>SAGA pattern</h1>
+  <h1>ProtoBuf VS JSON VS XML</h1>
 
-<p>To address the challenge of distributed transactions, the Saga pattern is the most common solution for managing data consistency across services. A saga is a sequence of local transactions that are coordinated to execute a complete business process. Each step in the saga is a local, atomic transaction within a single service. Upon successful completion, it triggers the next step in the sequence, typically by publishing an event or sending a command.</p>
-<p>The key to the Saga pattern's atomicity is its handling of failures. If any local transaction in the sequence fails, the saga executes a series of compensating transactions to undo the work of the preceding, successfully completed steps. For example, if a CreateOrder saga involves ProcessPayment, UpdateInventory, and CreateShipment, and the CreateShipment step fails, compensating transactions for RefundPayment and RestoreInventory would be executed. This approach does not provide the immediate consistency of an ACID transaction but instead achieves eventual consistency, where the system converges to a consistent state over time.</p>
-<p>There are two primary approaches to implementing sagas:</p>
-<ol>
-<li>
-<p><strong>Choreography</strong>: This is a decentralized approach where services communicate directly with each other by publishing and subscribing to events. There is no central coordinator.</p>
-</li>
-<li>
-<p><strong>Orchestration</strong>: This is a centralized approach where a dedicated orchestrator service is responsible for managing the entire saga. The orchestrator sends commands to each participant service, waits for a reply, and decides the next step in the workflow. If a step fails, the orchestrator is responsible for triggering the necessary compensating transactions. This approach is easier to monitor and manage for complex workflows but introduces the orchestrator as a potential single point of failure and creates a degree of coupling between the participant services and the orchestrator.</p>
-</li>
-</ol>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Protocol Buffers (Protobuf)</th>
+<th>JSON (JavaScript Object Notation)</th>
+<th>XML (eXtensible Markup Language)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Format Type</td>
+<td>Binary</td>
+<td>Text-based</td>
+<td>Text-based</td>
+</tr>
+<tr>
+<td>Performance (Speed)</td>
+<td>Very fast serialization/deserialization; up to 6x faster than JSON in server-to-server contexts.</td>
+<td>Slower than Protobuf due to text parsing overhead.</td>
+<td>Generally the slowest due to high verbosity and complex parsing rules.</td>
+</tr>
+<tr>
+<td>Performance (Size)</td>
+<td>Highly compact; significantly smaller payloads than JSON/XML.</td>
+<td>More compact than XML but larger than Protobuf due to text-based keys and syntax.</td>
+<td>Most verbose, resulting in the largest file sizes.</td>
+</tr>
+<tr>
+<td>Schema Requirement</td>
+<td>Strictly required; defined in a .proto file. Enforces a strong contract.</td>
+<td>Schema-less by default; schema can be added via external standards like JSON Schema or OpenAPI.</td>
+<td>Schema is optional (DTD, XSD) but commonly used in enterprise systems.</td>
+</tr>
+<tr>
+<td>Human Readability</td>
+<td>Not human-readable; requires tools for inspection.</td>
+<td>Human-readable and easy to inspect, aiding in debugging.</td>
+<td>Human-readable, though verbosity can make it complex to parse visually.</td>
+</tr>
+<tr>
+<td>Data Type Support</td>
+<td>Rich set of scalar types, including various integer sizes and encodings; supports enums and complex nested messages.</td>
+<td>Limited data types (string, number, boolean, array, object, null).</td>
+<td>Supports a wide range of data types through schema definitions (XSD).</td>
+</tr>
+<tr>
+<td>Compatibility</td>
+<td>Excellent backward and forward compatibility features built into the protocol design.</td>
+<td>No built-in compatibility features; relies on application-level conventions.</td>
+<td>Schema evolution is possible but can be complex to manage.</td>
+</tr>
+<tr>
+<td>Primary Use Cases</td>
+<td>High-performance internal microservices (gRPC), IoT, data storage, and performance-critical systems.</td>
+<td>Public web APIs, client-side web applications, configuration files, and scenarios valuing simplicity and readability.</td>
+<td>Enterprise systems, legacy applications, complex document formats, and standards like SOAP.</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -657,10 +708,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.top", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
