@@ -43,8 +43,9 @@ repo_name: GitHub
 edit_uri: edit/main/docs/
 
 plugins:
-  # - awesome-pages:  <- REMOVED this plugin
-  #     ignore_pages_files: true
+  - awesome-pages: 
+      collapse_single_pages: true
+      ignore_pages_files: true
   - search
 
 extra:
@@ -70,24 +71,24 @@ markdown_extensions:
   - attr_list
 
 # ADDED this manual navigation block back
-nav:
-  - Home: index.md
-  - Distributed Systems:
-      - Overview: "Distributed Systems/index.md"
-      - Architectural choice: "Distributed Systems/Architectural choice.md"
-      - Database per Service pattern: "Distributed Systems/Database per Service pattern.md"
-      - Domain Driven Design: "Distributed Systems/Domain Driven Design.md"
-      - Event Sourcing: "Distributed Systems/Event Sourcing.md"
-      - Inter Service Communication: "Distributed Systems/Inter-Service Communication.md"
-      - SAGA pattern: "Distributed Systems/SAGA pattern.md"
-      - When to create or extend a service: "Distributed Systems/When to create or extend a service.md"
-  - ProtoBuf:
-      - Overview: "ProtoBuf/index.md"
-      - Best Practices for Protobuf: "ProtoBuf/Best Practices for Protobuf.md"
-      - Interface Definition Language: "ProtoBuf/Interface Definition Language.md"
-      - ProtoBuf: "ProtoBuf/ProtoBuf.md"
-      - ProtoBuf VS JSON VS XML: "ProtoBuf/ProtoBuf VS JSON VS XML.md"
-      - ProtoBuf Workflow: "ProtoBuf/ProtoBuf Workflow.md"
-      - Protoc Compiler: "ProtoBuf/Protoc Compiler.md"
-      - Serializing and Deserializing in ProtoBuf: "ProtoBuf/Serializing and Deserializing in ProtoBuf.md"
+# nav:
+#   - Home: index.md
+#   - Distributed Systems:
+#       - Overview: "Distributed Systems/index.md"
+#       - Architectural choice: "Distributed Systems/Architectural choice.md"
+#       - Database per Service pattern: "Distributed Systems/Database per Service pattern.md"
+#       - Domain Driven Design: "Distributed Systems/Domain Driven Design.md"
+#       - Event Sourcing: "Distributed Systems/Event Sourcing.md"
+#       - Inter Service Communication: "Distributed Systems/Inter-Service Communication.md"
+#       - SAGA pattern: "Distributed Systems/SAGA pattern.md"
+#       - When to create or extend a service: "Distributed Systems/When to create or extend a service.md"
+#   - ProtoBuf:
+#       - Overview: "ProtoBuf/index.md"
+#       - Best Practices for Protobuf: "ProtoBuf/Best Practices for Protobuf.md"
+#       - Interface Definition Language: "ProtoBuf/Interface Definition Language.md"
+#       - ProtoBuf: "ProtoBuf/ProtoBuf.md"
+#       - ProtoBuf VS JSON VS XML: "ProtoBuf/ProtoBuf VS JSON VS XML.md"
+#       - ProtoBuf Workflow: "ProtoBuf/ProtoBuf Workflow.md"
+#       - Protoc Compiler: "ProtoBuf/Protoc Compiler.md"
+#       - Serializing and Deserializing in ProtoBuf: "ProtoBuf/Serializing and Deserializing in ProtoBuf.md"
 
