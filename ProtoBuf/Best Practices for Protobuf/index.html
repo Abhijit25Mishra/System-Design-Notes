@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://abhijit25mishra.github.io/System-Design-Notes/ProtoBuf/Interface%20Definition%20Language/">
+        <link rel="canonical" href="https://abhijit25mishra.github.io/System-Design-Notes/ProtoBuf/Best%20Practices%20for%20Protobuf/">
       
       
-        <link rel="prev" href="../Best%20Practices%20for%20Protobuf/">
+        <link rel="prev" href="../../When%20to%20create%20or%20extend%20a%20service/">
       
       
-        <link rel="next" href="../ProtoBuf%20VS%20JSON%20VS%20XML/">
+        <link rel="next" href="../Interface%20Definition%20Language/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Interface Definition Language - System Design Notes</title>
+        <title>Best Practices for Protobuf - System Design Notes</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#idl" class="md-skip">
+        <a href="#file-organization" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Interface Definition Language
+              Best Practices for Protobuf
             
           </span>
         </div>
@@ -416,29 +416,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../Best%20Practices%20for%20Protobuf/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Best Practices for Protobuf
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -454,7 +431,7 @@
   
   
   <span class="md-ellipsis">
-    Interface Definition Language
+    Best Practices for Protobuf
     
   </span>
   
@@ -467,7 +444,7 @@
   
   
   <span class="md-ellipsis">
-    Interface Definition Language
+    Best Practices for Protobuf
     
   </span>
   
@@ -488,137 +465,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#idl" class="md-nav__link">
+  <a href="#file-organization" class="md-nav__link">
     <span class="md-ellipsis">
-      IDL
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="IDL">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#syntax" class="md-nav__link">
-    <span class="md-ellipsis">
-      Syntax:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#importing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Importing:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#field-numbertag" class="md-nav__link">
-    <span class="md-ellipsis">
-      Field Number/Tag
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Field Number/Tag">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#syntax_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Syntax:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#uniqueness-and-immutability" class="md-nav__link">
-    <span class="md-ellipsis">
-      Uniqueness and Immutability:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#performance-implications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Performance Implications:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#field-cardinality" class="md-nav__link">
-    <span class="md-ellipsis">
-      Field Cardinality
+      File Organization:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#services-for-rpc" class="md-nav__link">
+  <a href="#style-guide" class="md-nav__link">
     <span class="md-ellipsis">
-      Services for RPC
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Services for RPC">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#syntax_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Syntax:
+      Style Guide:
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#rpc-methods" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#unique-requestresponse-messages" class="md-nav__link">
     <span class="md-ellipsis">
-      RPC Methods:
+      Unique Request/Response Messages:
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#streaming" class="md-nav__link">
-    <span class="md-ellipsis">
-      Streaming:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -626,6 +495,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Interface%20Definition%20Language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interface Definition Language
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -778,137 +670,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#idl" class="md-nav__link">
+  <a href="#file-organization" class="md-nav__link">
     <span class="md-ellipsis">
-      IDL
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="IDL">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#syntax" class="md-nav__link">
-    <span class="md-ellipsis">
-      Syntax:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#importing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Importing:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#field-numbertag" class="md-nav__link">
-    <span class="md-ellipsis">
-      Field Number/Tag
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Field Number/Tag">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#syntax_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Syntax:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#uniqueness-and-immutability" class="md-nav__link">
-    <span class="md-ellipsis">
-      Uniqueness and Immutability:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#performance-implications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Performance Implications:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#field-cardinality" class="md-nav__link">
-    <span class="md-ellipsis">
-      Field Cardinality
+      File Organization:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#services-for-rpc" class="md-nav__link">
+  <a href="#style-guide" class="md-nav__link">
     <span class="md-ellipsis">
-      Services for RPC
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Services for RPC">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#syntax_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Syntax:
+      Style Guide:
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#rpc-methods" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#unique-requestresponse-messages" class="md-nav__link">
     <span class="md-ellipsis">
-      RPC Methods:
+      Unique Request/Response Messages:
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#streaming" class="md-nav__link">
-    <span class="md-ellipsis">
-      Streaming:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -928,128 +712,86 @@
 
 
 
-  <h1>Interface Definition Language</h1>
+  <h1>Best Practices for Protobuf</h1>
 
-<h2 id="idl">IDL</h2>
-<p>The fundamental unit of data structure in Protobuf is the message. A message is a logical record of information, analogous to a class in Java or a struct in C++ or Go.</p>
-<h3 id="syntax">Syntax:</h3>
-<p>A message is declared using the message keyword, followed by its name and a pair of curly braces enclosing its field definitions.29</p>
-<p>```Protocol Buffers
-message SongRequest {<br />
-  string song_name = 1;<br />
-  int64 artist_id = 2;<br />
-}  </p>
-<pre><code>
-
-### Naming Conventions:
-
-The official Protobuf style guide recommends using **TitleCase**  **for message names** and **lower_snake_case for field names**. Following these conventions ensures that the generated code is idiomatic in the target languages, as the compiler often transforms lower_snake_case into the conventional style of the target language (e.g., camelCase in Java).
-
-### Nested Messages:
-
-Messages can be defined within the scope of other messages. This is useful for grouping related data structures and creating a logical namespace.
-
-```Protocol Buffers
-
-message SearchResponse {  
-  message Result {  
-    string url = 1;  
-    string title = 2;  
-  }  
-  repeated Result results = 1;  
-}  
-</code></pre>
-<p>Here, Result is a nested message type that can only be accessed within the context of SearchResponse (e.g., SearchResponse.Result in generated code).</p>
-<h3 id="importing">Importing:</h3>
-<p>Messages can be defined out of the scope of the message, i.e in a different file, this can be later imported into the required message. </p>
-<blockquote>
-<p><strong>result.proto</strong>
-```Protocol Buffers
-syntax = "proto3";</p>
-</blockquote>
-<p>package search;</p>
-<p>// Define Result independently
-message Result {
-  string url = 1;
-  string title = 2;
-}</p>
-<pre><code>
-&gt; **search_response.proto**
-``` Protocol Buffers
-syntax = &quot;proto3&quot;;
-
-package search;
-
-import &quot;result.proto&quot;; // Import the external message definition
-
-message SearchResponse {
-  repeated Result results = 1; // Use it directly since it shares the same package
-}
-</code></pre>
-<h2 id="field-numbertag">Field Number/Tag</h2>
-<h3 id="syntax_1">Syntax:</h3>
-<p>Every field in a message must be assigned a unique positive integer number.</p>
-<blockquote>
-<p>type field_name = 1;</p>
-</blockquote>
-<h3 id="function">Function:</h3>
-<p>These field numbers, not the field names, are what identify the fields in the compact binary wire format. When a message is serialized, the output is a series of key-value pairs where the key is derived from the field number and a wire type. This design is a primary reason for Protobuf's efficiency and compactness, as it avoids sending verbose string keys (like in JSON) over the network.</p>
-<h3 id="uniqueness-and-immutability">Uniqueness and Immutability:</h3>
-<p>The rules governing field numbers are strict and are the bedrock of Protobuf's schema evolution capabilities:</p>
+<p>The long-term success of a system built on Protobuf depends heavily on the quality and maintainability of its .proto files. Adhering to best practices is not merely a matter of style but a crucial element of future-proofing the API.</p>
+<h3 id="file-organization">File Organization:</h3>
+<p>Logically group related messages and services within the same .proto file. For message types that are expected to be widely used across many different services or projects (e.g., a common Money or Timestamp message), it is best to place them in their own separate file with no other dependencies. This promotes reusability and minimizes dependency bloat.</p>
+<h3 id="style-guide">Style Guide:</h3>
+<p>Consistency is key. The official Google Protobuf Style Guide provides a set of conventions that should be followed :</p>
 <ul>
-<li>The number must be unique within that message.</li>
-<li>Once a field number is used in a production system, it must never be changed.</li>
-<li>A field number from a deleted field should never be reused for a new field. Instead, the old number should be marked as reserved to prevent future accidents.</li>
+<li>Formatting: Use a standard line length (80 characters) and indentation (2 spaces).</li>
+<li>Naming: Use TitleCase for message, service, and enum names. Use lower_snake_case for field and oneof names. Use UPPER_SNAKE_CASE for enum values.    </li>
+<li>Comments: Use //-style comments to document the purpose of messages, fields, and services. A well-commented .proto file is a form of living documentation for the API.</li>
 </ul>
-<p>Violating these rules can lead to severe data corruption, as a parser using a newer schema could completely misinterpret data written by an older one. The stability of these numbers is the central pillar of Protobuf's compatibility contract. This prioritization of long-term stability over short-term developer convenience necessitates strong governance over .proto files, including strict code review policies and the use of automated tools to prevent accidental changes to field numbers.</p>
-<h3 id="performance-implications">Performance Implications:</h3>
-<p>The choice of field number has a direct impact on the size of the serialized message. Field numbers in the range 1 through 15 require only one byte to encode the key (tag + wire type). Numbers in the range 16 through 2047 take two bytes. For this reason, the most frequently used or repeated fields should be assigned the lowest available field numbers.</p>
-<p>Reserved Ranges:</p>
-<p>The field numbers from 19,000 to 19,999 are reserved for the internal implementation of Protocol Buffers and cannot be used.</p>
-<h2 id="field-cardinality">Field Cardinality</h2>
-<p>Each field in a message must have a cardinality, which specifies how many times that field can appear.</p>
-<ul>
-<li>
-<p>Singular Fields: The field can appear at most once in a message. The handling of singular fields differs significantly between Protobuf versions and is a key concept to master.</p>
-</li>
-<li>
-<p>optional (Explicit Presence): This is the recommended approach for modern Protobuf (proto3 with the optional keyword, and the default in editions). It means the system can distinguish between a field that was not set and a field that was explicitly set to its default value (e.g., 0 for an integer). The generated code includes a has_...() method to perform this check.</p>
-</li>
-<li>
-<p>Implicit Presence: This was the original default for scalar fields in proto3. A field holding its default value (e.g., 0, false, "") is not serialized. This makes it impossible for the receiver to know if the sender intentionally set the value to 0 or simply omitted the field. This ambiguity can lead to bugs and is why explicit presence is now favored.    </p>
-</li>
-<li>
-<p>repeated Fields: The field can be repeated any number of times (including zero). This is used to represent lists, arrays, or sequences of values. The order of the elements is preserved. The style guide recommends using pluralized names for repeated fields (e.g., repeated Song songs).</p>
-</li>
-<li>
-<p>required Fields (proto2 only, Deprecated): This keyword, available only in proto2, specifies that a value for the field must be provided. While seemingly useful for validation, it proved to be extremely problematic for schema evolution. A field marked as required can never be safely made optional or removed without breaking older clients, which will reject messages that are missing the field. For this reason, its use is strongly discouraged, and it was removed entirely from proto3 and editions.</p>
-</li>
-</ul>
-<h2 id="services-for-rpc">Services for RPC</h2>
-<p><strong>In addition to defining data structures, .proto files are the standard way to define service interfaces for RPC frameworks like gRPC.</strong></p>
-<h3 id="syntax_2">Syntax:</h3>
-<p>A service is defined using the service keyword, containing a list of rpc methods.  </p>
-<p><code>Protocol Buffers  
-service SearchService {  
-  rpc Search(SearchRequest) returns (SearchResponse);  
-}</code> </p>
-<h3 id="rpc-methods">RPC Methods:</h3>
-<p>Each rpc method specifies its name, its request message type, and its response message type. The compiler uses this definition to generate client stubs and server interface skeletons.    </p>
-<h3 id="streaming">Streaming:</h3>
-<p>The stream keyword can be prepended to the request and/or response types to define different communication patterns, which are a core feature of gRPC: 
-- Unary RPC: rpc Method(Request) returns (Response); (the default)</p>
-<ul>
-<li>
-<p>Server Streaming RPC: rpc Method(Request) returns (stream Response);</p>
-</li>
-<li>
-<p>Client Streaming RPC: rpc Method(stream Request) returns (Response);</p>
-</li>
-<li>
-<p>Bidirectional Streaming RPC: rpc Method(stream Request) returns (stream Response);</p>
-</li>
-</ul>
-<p>**</p>
+<h3 id="unique-requestresponse-messages">Unique Request/Response Messages:</h3>
+<p>A critical best practice for RPC service design is to always define unique message types for each method's request and response, even if a method initially takes no parameters or returns nothing. Instead of using a shared or empty type like google.protobuf.Empty, define a specific message (e.g., CreateUserRequest, CreateUserResponse). This practice future-proofs the API. If, in the future, a parameter needs to be added to the <strong>request or a new field needs to be returned in the response, it can be done by adding a field to the existing message—a non-breaking change. If google.protobuf.Empty were used, adding any parameter would require changing the method signature, which is a breaking change.</strong> This discipline of creating purpose-built messages ensures the API remains extensible for its entire lifetime.</p>
+<table>
+<thead>
+<tr>
+<th>Schema Change</th>
+<th>Backward Compatible?</th>
+<th>Forward Compatible?</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add a new optional or repeated field</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Safest and most common change. New code uses default values for old data; old code ignores the new field.</td>
+</tr>
+<tr>
+<td>Remove a field</td>
+<td>Yes</td>
+<td>No (Potentially)</td>
+<td>Old code may fail if it relies on the field. The field number and name should be marked as reserved.</td>
+</tr>
+<tr>
+<td>Rename a field</td>
+<td>Yes (Wire Format)</td>
+<td>Yes (Wire Format)</td>
+<td>Breaking change for source code. Requires coordinated code updates across all clients and servers.</td>
+</tr>
+<tr>
+<td>Change a field's number</td>
+<td>No</td>
+<td>No</td>
+<td>Never do this. This is a catastrophic breaking change that leads to data corruption.</td>
+</tr>
+<tr>
+<td>Change type (int32 to int64)</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Compatible numeric types can be changed.</td>
+</tr>
+<tr>
+<td>Change type (int32 to string)</td>
+<td>No</td>
+<td>No</td>
+<td>Incompatible wire formats will cause deserialization errors.</td>
+</tr>
+<tr>
+<td>Change from singular to repeated</td>
+<td>No</td>
+<td>No</td>
+<td>The wire format is incompatible.</td>
+</tr>
+<tr>
+<td>Add a field to an existing oneof</td>
+<td>Yes</td>
+<td>No</td>
+<td>Old clients will not recognize the new oneof variant, leading to potential data loss or misinterpretation.</td>
+</tr>
+<tr>
+<td>Remove a field from an existing oneof</td>
+<td>No</td>
+<td>Yes</td>
+<td>New clients may misinterpret old data containing the removed variant, leading to cascading data loss.</td>
+</tr>
+</tbody>
+</table>
 
 
 
