@@ -3,21 +3,80 @@ site_url: https://abhijit25mishra.github.io/System-Design-Notes
 docs_dir: docs
 site_dir: site
 
+# ─── THEME ──────────────────────────────────────────────
 theme:
   name: material
   features:
     - navigation.instant
-    - navigation.expand        # Enables collapsible folders
-    - navigation.sections      # Groups items under headings
-    - navigation.tabs          # Adds top-level tabs
-    - navigation.tabs.sticky   # Keeps tabs visible when scrolling
-    - navigation.top
+    - navigation.expand          # Collapsible folders
+    - navigation.sections
+    - navigation.tabs            # Top-level tabs
+    - navigation.tabs.sticky     # Tabs stay visible while scrolling
+    - navigation.top             # Adds “Back to top” button
+    - navigation.tracking
+    - header.autohide
+    - navigation.footer
     - search.highlight
     - search.suggest
+    - content.code.copy          # Copy button on code blocks
+    - content.action.edit        # “Edit this page” link
+    - content.tooltips
+    - content.anchors
+    - toc.integrate
 
+  palette:
+    # Light mode
+    - scheme: default
+      primary: green
+      accent: lime
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: green
+      accent: lime
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+# ─── REPOSITORY LINKS ───────────────────────────────────
+repo_url: https://github.com/abhijit25mishra/System-Design-Notes
+repo_name: GitHub
+edit_uri: edit/main/docs/
+
+# ─── PLUGINS ────────────────────────────────────────────
 plugins:
   - group:
       enabled: true
       plugins:
         - search
         - awesome-pages
+
+# ─── MARKDOWN ENHANCEMENTS ──────────────────────────────
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.snippets
+
+# ─── EXTRA SETTINGS ─────────────────────────────────────
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/abhijit25mishra
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/abhijit25mishra/
