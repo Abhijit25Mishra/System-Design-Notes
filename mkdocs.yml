@@ -7,15 +7,17 @@ theme:
   name: material
   features:
     - navigation.instant
-    - navigation.expand        
-    - navigation.sections      
+    - navigation.expand        # Enables collapsible folders
+    - navigation.sections      # Groups items under headings
+    - navigation.tabs          # Adds top-level tabs
+    - navigation.tabs.sticky   # Keeps tabs visible when scrolling
     - navigation.top
     - search.highlight
     - search.suggest
 
 plugins:
   - group:
-      enabled: true            
+      enabled: true
       plugins:
         - search
         - awesome-pages
