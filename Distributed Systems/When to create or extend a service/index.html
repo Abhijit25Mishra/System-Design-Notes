@@ -8,25 +8,25 @@
       
       
       
-        <link rel="canonical" href="https://abhijit25mishra.github.io/System-Design-Notes/SAGA%20pattern/">
+        <link rel="canonical" href="https://abhijit25mishra.github.io/System-Design-Notes/Distributed%20Systems/When%20to%20create%20or%20extend%20a%20service/">
       
       
-        <link rel="prev" href="../Inter-Service%20Communication/">
+        <link rel="prev" href="../SAGA%20pattern/">
       
       
-        <link rel="next" href="../When%20to%20create%20or%20extend%20a%20service/">
+        <link rel="next" href="../../ProtoBuf/Best%20Practices%20for%20Protobuf/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
-        <title>SAGA pattern - System Design Notes</title>
+        <title>When to create or extend a service - System Design Notes</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
       
       
 
@@ -45,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -63,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#reasons-to-create-a-new-service" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -75,7 +80,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="System Design Notes" class="md-header__button md-logo" aria-label="System Design Notes" data-md-component="logo">
+    <a href="../.." title="System Design Notes" class="md-header__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -95,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SAGA pattern
+              When to create or extend a service
             
           </span>
         </div>
@@ -164,7 +169,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -181,134 +186,21 @@
   
   
   
-  
-    <li class="md-tabs__item">
-      <a href="../Architectural%20choice/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Architectural choice
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Database%20per%20Service%20pattern/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Database per Service pattern
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Domain%20Driven%20Design/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Domain Driven Design
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Event%20Sourcing/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Event Sourcing
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Inter-Service%20Communication/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Inter Service Communication
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
     
   
   
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
-        
-  
-  
     
-  
-  SAGA pattern
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../When%20to%20create%20or%20extend%20a%20service/" class="md-tabs__link">
-        
-  
-  
     
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Architectural%20choice/" class="md-tabs__link">
+          
   
-  When to create or extend a service
+  
+  Distributed Systems
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -320,7 +212,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../ProtoBuf/Best%20Practices%20for%20Protobuf/" class="md-tabs__link">
+        <a href="../../ProtoBuf/Best%20Practices%20for%20Protobuf/" class="md-tabs__link">
           
   
   
@@ -360,7 +252,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
+    <a href="../.." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -378,7 +270,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -395,6 +287,54 @@
     
       
       
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Distributed Systems
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Distributed Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
   
@@ -414,9 +354,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -436,9 +377,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -458,9 +400,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -480,9 +423,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -502,9 +446,33 @@
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SAGA%20pattern/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SAGA pattern
     
-      
-      
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
   
   
     
@@ -517,30 +485,20 @@
       
       
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
   
   
   <span class="md-ellipsis">
-    SAGA pattern
+    When to create or extend a service
     
   </span>
   
 
-      </a>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../When%20to%20create%20or%20extend%20a%20service/" class="md-nav__link">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -551,6 +509,50 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reasons-to-create-a-new-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reasons to create a new service
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reasons-to-extend-a-new-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reasons to extend a new service
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -577,10 +579,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -593,8 +595,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             ProtoBuf
           </label>
@@ -607,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/Best%20Practices%20for%20Protobuf/" class="md-nav__link">
+      <a href="../../ProtoBuf/Best%20Practices%20for%20Protobuf/" class="md-nav__link">
         
   
   
@@ -630,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/Interface%20Definition%20Language/" class="md-nav__link">
+      <a href="../../ProtoBuf/Interface%20Definition%20Language/" class="md-nav__link">
         
   
   
@@ -653,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
+      <a href="../../ProtoBuf/ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
         
   
   
@@ -676,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/ProtoBuf%20Workflow/" class="md-nav__link">
+      <a href="../../ProtoBuf/ProtoBuf%20Workflow/" class="md-nav__link">
         
   
   
@@ -699,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/ProtoBuf/" class="md-nav__link">
+      <a href="../../ProtoBuf/ProtoBuf/" class="md-nav__link">
         
   
   
@@ -722,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/Protoc%20Compiler/" class="md-nav__link">
+      <a href="../../ProtoBuf/Protoc%20Compiler/" class="md-nav__link">
         
   
   
@@ -745,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/Serializing%20and%20Deserializing%20in%20ProtoBuf/" class="md-nav__link">
+      <a href="../../ProtoBuf/Serializing%20and%20Deserializing%20in%20ProtoBuf/" class="md-nav__link">
         
   
   
@@ -786,6 +788,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reasons-to-create-a-new-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reasons to create a new service
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reasons-to-extend-a-new-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reasons to extend a new service
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -800,19 +828,23 @@
 
 
 
-  <h1>SAGA pattern</h1>
+  <h1>When to create or extend a service</h1>
 
-<p>To address the challenge of distributed transactions, the Saga pattern is the most common solution for managing data consistency across services. A saga is a sequence of local transactions that are coordinated to execute a complete business process. Each step in the saga is a local, atomic transaction within a single service. Upon successful completion, it triggers the next step in the sequence, typically by publishing an event or sending a command.</p>
-<p>The key to the Saga pattern's atomicity is its handling of failures. If any local transaction in the sequence fails, the saga executes a series of compensating transactions to undo the work of the preceding, successfully completed steps. For example, if a CreateOrder saga involves ProcessPayment, UpdateInventory, and CreateShipment, and the CreateShipment step fails, compensating transactions for RefundPayment and RestoreInventory would be executed. This approach does not provide the immediate consistency of an ACID transaction but instead achieves eventual consistency, where the system converges to a consistent state over time.</p>
-<p>There are two primary approaches to implementing sagas:</p>
+<p>There is no universal answer. It must be based on care evaluation of architectural principles and long term consequences. </p>
+<h3 id="reasons-to-create-a-new-service">Reasons to create a new service</h3>
 <ol>
-<li>
-<p><strong>Choreography</strong>: This is a decentralized approach where services communicate directly with each other by publishing and subscribing to events. There is no central coordinator.</p>
-</li>
-<li>
-<p><strong>Orchestration</strong>: This is a centralized approach where a dedicated orchestrator service is responsible for managing the entire saga. The orchestrator sends commands to each participant service, waits for a reply, and decides the next step in the workflow. If a step fails, the orchestrator is responsible for triggering the necessary compensating transactions. This approach is easier to monitor and manage for complex workflows but introduces the orchestrator as a potential single point of failure and creates a degree of coupling between the participant services and the orchestrator.</p>
-</li>
+<li><strong>Divergent Responsibilities and the Single Responsibility Principle</strong></li>
+<li><strong>Independent Scaling Requirements</strong></li>
+<li><strong>Different Technology Stack</strong></li>
+<li><strong>Team Ownership and Autonomy</strong></li>
 </ol>
+<h3 id="reasons-to-extend-a-new-service">Reasons to extend a new service</h3>
+<ol>
+<li><strong>High Cohesion and Domain Proximity</strong></li>
+<li><strong>Avoiding Premature Decomposition</strong> : every new service that gets introduces operational overhead, including deployment pipelines, monitoring, security configurations, and network communication latency.</li>
+</ol>
+<p>This decision-making process is fundamentally about preserving the [[Architectural choice|architectural integrity]] of the system by protecting the boundaries of each service.</p>
+<p>The first step when created a new microservice starts with [[Domain Driven Design]].</p>
 
 
 
@@ -867,10 +899,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.expand", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.expand", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>

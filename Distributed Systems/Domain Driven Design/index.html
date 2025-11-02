@@ -8,25 +8,25 @@
       
       
       
-        <link rel="canonical" href="https://abhijit25mishra.github.io/System-Design-Notes/When%20to%20create%20or%20extend%20a%20service/">
+        <link rel="canonical" href="https://abhijit25mishra.github.io/System-Design-Notes/Distributed%20Systems/Domain%20Driven%20Design/">
       
       
-        <link rel="prev" href="../SAGA%20pattern/">
+        <link rel="prev" href="../Database%20per%20Service%20pattern/">
       
       
-        <link rel="next" href="../ProtoBuf/Best%20Practices%20for%20Protobuf/">
+        <link rel="next" href="../Event%20Sourcing/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
-        <title>When to create or extend a service - System Design Notes</title>
+        <title>Domain Driven Design - System Design Notes</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
       
       
 
@@ -45,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reasons-to-create-a-new-service" class="md-skip">
+        <a href="#why-ddd-is-essential" class="md-skip">
           Skip to content
         </a>
       
@@ -80,7 +80,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="System Design Notes" class="md-header__button md-logo" aria-label="System Design Notes" data-md-component="logo">
+    <a href="../.." title="System Design Notes" class="md-header__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              When to create or extend a service
+              Domain Driven Design
             
           </span>
         </div>
@@ -169,7 +169,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -186,134 +186,21 @@
   
   
   
-  
-    <li class="md-tabs__item">
-      <a href="../Architectural%20choice/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Architectural choice
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Database%20per%20Service%20pattern/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Database per Service pattern
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Domain%20Driven%20Design/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Domain Driven Design
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Event%20Sourcing/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Event Sourcing
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Inter-Service%20Communication/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Inter Service Communication
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../SAGA%20pattern/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  SAGA pattern
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
     
   
   
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Architectural%20choice/" class="md-tabs__link">
+          
   
-  When to create or extend a service
+  
+  Distributed Systems
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -325,7 +212,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../ProtoBuf/Best%20Practices%20for%20Protobuf/" class="md-tabs__link">
+        <a href="../../ProtoBuf/Best%20Practices%20for%20Protobuf/" class="md-tabs__link">
           
   
   
@@ -365,7 +252,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
+    <a href="../.." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -383,7 +270,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -400,6 +287,54 @@
     
       
       
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Distributed Systems
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Distributed Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
   
@@ -419,9 +354,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -441,97 +377,10 @@
     </li>
   
 
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Domain%20Driven%20Design/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Domain Driven Design
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Event%20Sourcing/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Event Sourcing
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Inter-Service%20Communication/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Inter Service Communication
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../SAGA%20pattern/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    SAGA pattern
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
+              
+            
+              
+                
   
   
     
@@ -549,7 +398,7 @@
   
   
   <span class="md-ellipsis">
-    When to create or extend a service
+    Domain Driven Design
     
   </span>
   
@@ -562,7 +411,7 @@
   
   
   <span class="md-ellipsis">
-    When to create or extend a service
+    Domain Driven Design
     
   </span>
   
@@ -583,18 +432,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reasons-to-create-a-new-service" class="md-nav__link">
+  <a href="#why-ddd-is-essential" class="md-nav__link">
     <span class="md-ellipsis">
-      Reasons to create a new service
+      why DDD is essential ?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="why DDD is essential ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategic-ddd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategic DDD
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#tactical-ddd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tactical DDD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#reasons-to-extend-a-new-service" class="md-nav__link">
+  <a href="#data-consistency-issue" class="md-nav__link">
     <span class="md-ellipsis">
-      Reasons to extend a new service
+      Data Consistency Issue
     </span>
   </a>
   
@@ -603,6 +476,106 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Event%20Sourcing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Event Sourcing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Inter-Service%20Communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inter Service Communication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SAGA%20pattern/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SAGA pattern
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../When%20to%20create%20or%20extend%20a%20service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    When to create or extend a service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -630,10 +603,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -646,8 +619,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             ProtoBuf
           </label>
@@ -660,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/Best%20Practices%20for%20Protobuf/" class="md-nav__link">
+      <a href="../../ProtoBuf/Best%20Practices%20for%20Protobuf/" class="md-nav__link">
         
   
   
@@ -683,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/Interface%20Definition%20Language/" class="md-nav__link">
+      <a href="../../ProtoBuf/Interface%20Definition%20Language/" class="md-nav__link">
         
   
   
@@ -706,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
+      <a href="../../ProtoBuf/ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
         
   
   
@@ -729,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/ProtoBuf%20Workflow/" class="md-nav__link">
+      <a href="../../ProtoBuf/ProtoBuf%20Workflow/" class="md-nav__link">
         
   
   
@@ -752,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/ProtoBuf/" class="md-nav__link">
+      <a href="../../ProtoBuf/ProtoBuf/" class="md-nav__link">
         
   
   
@@ -775,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/Protoc%20Compiler/" class="md-nav__link">
+      <a href="../../ProtoBuf/Protoc%20Compiler/" class="md-nav__link">
         
   
   
@@ -798,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/Serializing%20and%20Deserializing%20in%20ProtoBuf/" class="md-nav__link">
+      <a href="../../ProtoBuf/Serializing%20and%20Deserializing%20in%20ProtoBuf/" class="md-nav__link">
         
   
   
@@ -846,18 +819,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reasons-to-create-a-new-service" class="md-nav__link">
+  <a href="#why-ddd-is-essential" class="md-nav__link">
     <span class="md-ellipsis">
-      Reasons to create a new service
+      why DDD is essential ?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="why DDD is essential ?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strategic-ddd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategic DDD
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#tactical-ddd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tactical DDD
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#reasons-to-extend-a-new-service" class="md-nav__link">
+  <a href="#data-consistency-issue" class="md-nav__link">
     <span class="md-ellipsis">
-      Reasons to extend a new service
+      Data Consistency Issue
     </span>
   </a>
   
@@ -879,23 +876,32 @@
 
 
 
-  <h1>When to create or extend a service</h1>
+  <h1>Domain Driven Design</h1>
 
-<p>There is no universal answer. It must be based on care evaluation of architectural principles and long term consequences. </p>
-<h3 id="reasons-to-create-a-new-service">Reasons to create a new service</h3>
+<p>when a new microservice is being created. the most crucial task is to define its boundaries. A microservices value is directly tied to its autonomy and single minded focus. </p>
+<p>Poorly defined microservices lead to systemic problems, like overly chatty, data consistency issues, distributed monoliths.</p>
+<h3 id="why-ddd-is-essential">why DDD is essential ?</h3>
+<p>DDD is a software design methodology that advocates for modeling software based on the underlying <strong>business domain</strong>. Its core premise is that complex business logic should be at the heart of the application, and the software's structure should reflect the real-world processes and rules of the business. </p>
+<p>This philosophy aligns perfectly with the goals of microservices architecture. Microservices are intended to be organized around business capabilities, ensuring they have <strong>high functional cohesion (doing one thing well) and loose coupling (minimal dependency on other services).</strong></p>
+<p>DDD provides the tools to achieve this. It helps decompose a large, complex system into self-contained, understandable units by systematically analyzing business requirements.</p>
+<h4 id="strategic-ddd">Strategic DDD</h4>
+<p>Focuses on <strong>high-level, large-scale, structure of the system.</strong> It is a collaborative process that <strong>involves both software developers and domain experts</strong> (such as business analysts and product managers) to map out the problem space before designing the solution space.</p>
 <ol>
-<li><strong>Divergent Responsibilities and the Single Responsibility Principle</strong></li>
-<li><strong>Independent Scaling Requirements</strong></li>
-<li><strong>Different Technology Stack</strong></li>
-<li><strong>Team Ownership and Autonomy</strong></li>
+<li>Ubiquitous Language: A cornerstone of DDD is the development of a Ubiquitous Language a common, rigorous, and unambiguous vocabulary shared by all stakeholders.</li>
+<li>Bounded Context: The central pattern in Strategic DDD is the Bounded Context. A Bounded Context is a conceptual boundary within which a specific domain model and its Ubiquitous Language are valid, consistent, and unambiguous. DDD recognizes that attempting to create a single, unified model for an entire large-scale system is not feasible or cost-effective, as different parts of a business often use the same terms to mean subtly different things.</li>
+<li>In a microservices architecture, each Bounded Context is a prime candidate to become a microservice. This alignment ensures that each service owns a specific, well-defined part of the business domain, operates autonomously, and maintains its own internal consistency. Defining these boundaries is the most critical step; misdefined boundaries are a primary cause of tight coupling and architectural complexity.</li>
+<li>Context Maps: To manage the interactions between these boundaries, DDD uses Context Maps. These are diagrams that visualize the relationships between different Bounded Contexts, clarifying how the corresponding microservices will integrate.</li>
 </ol>
-<h3 id="reasons-to-extend-a-new-service">Reasons to extend a new service</h3>
+<h4 id="tactical-ddd">Tactical DDD</h4>
+<p>Tactical DDD provides a set of design patterns for building the rich domain model inside a single Bounded Context. These patterns help structure the business logic in a way that is clean, maintainable, and decoupled from infrastructure concerns.</p>
 <ol>
-<li><strong>High Cohesion and Domain Proximity</strong></li>
-<li><strong>Avoiding Premature Decomposition</strong> : every new service that gets introduces operational overhead, including deployment pipelines, monitoring, security configurations, and network communication latency.</li>
+<li><strong>Entities: These are objects defined not by their attributes, but by their thread of continuity and a distinct, persistent identity.</strong></li>
+<li><strong>Value Objects: These are immutable objects defined by their attributes, lacking a conceptual identity.</strong></li>
+<li><strong>Aggregates: An Aggregate is a cluster of associated objects (Entities and Value Objects) that are treated as a single unit for the purpose of data changes. Each Aggregate has a root entity, known as the Aggregate Root, which is the sole entry point for any command that modifies the Aggregate. This structure is crucial for enforcing business rules and invariants, as the Aggregate Root ensures that the entire cluster of objects remains in a consistent state after any operation.</strong></li>
 </ol>
-<p>This decision-making process is fundamentally about preserving the [[Architectural choice|architectural integrity]] of the system by protecting the boundaries of each service.</p>
-<p>The first step when created a new microservice starts with [[Domain Driven Design]].</p>
+<p>Aggregates are particularly important for microservice design. They represent a natural consistency boundary, meaning a single transaction should ideally not span multiple Aggregates. This concept maps directly to microservices, where Aggregates are often excellent candidates for the resources exposed by a service's API.</p>
+<h3 id="data-consistency-issue">Data Consistency Issue</h3>
+<p>Once a microservice's boundaries have been defined using Domain-Driven Design, the next logical step is to determine its data management strategy. The architectural choice to isolate services necessitates a corresponding isolation of their data. This leads to the adoption of the [[Database per Service pattern]], a foundational element of microservice design. While this pattern provides significant benefits in terms of autonomy and loose coupling, it introduces the profound challenge of maintaining data consistency and integrity in a distributed environment.</p>
 
 
 
@@ -950,10 +956,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.expand", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.expand", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>

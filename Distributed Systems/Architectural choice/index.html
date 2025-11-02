@@ -8,25 +8,25 @@
       
       
       
-        <link rel="canonical" href="https://abhijit25mishra.github.io/System-Design-Notes/Inter-Service%20Communication/">
+        <link rel="canonical" href="https://abhijit25mishra.github.io/System-Design-Notes/Distributed%20Systems/Architectural%20choice/">
       
       
-        <link rel="prev" href="../Event%20Sourcing/">
+        <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../SAGA%20pattern/">
+        <link rel="next" href="../Database%20per%20Service%20pattern/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
-        <title>Inter Service Communication - System Design Notes</title>
+        <title>Architectural choice - System Design Notes</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
       
       
 
@@ -45,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -63,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#monolithic-vs-microservices" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -75,7 +80,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="System Design Notes" class="md-header__button md-logo" aria-label="System Design Notes" data-md-component="logo">
+    <a href="../.." title="System Design Notes" class="md-header__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -95,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inter Service Communication
+              Architectural choice
             
           </span>
         </div>
@@ -164,7 +169,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -181,134 +186,21 @@
   
   
   
-  
-    <li class="md-tabs__item">
-      <a href="../Architectural%20choice/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Architectural choice
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Database%20per%20Service%20pattern/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Database per Service pattern
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Domain%20Driven%20Design/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Domain Driven Design
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../Event%20Sourcing/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Event Sourcing
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
     
   
   
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
-        
-  
-  
     
-  
-  Inter Service Communication
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../SAGA%20pattern/" class="md-tabs__link">
-        
-  
-  
     
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
   
-  SAGA pattern
+  
+  Distributed Systems
 
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../When%20to%20create%20or%20extend%20a%20service/" class="md-tabs__link">
-        
-  
-  
+        </a>
+      </li>
     
-  
-  When to create or extend a service
-
-      </a>
-    </li>
   
 
       
@@ -320,7 +212,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../ProtoBuf/Best%20Practices%20for%20Protobuf/" class="md-tabs__link">
+        <a href="../../ProtoBuf/Best%20Practices%20for%20Protobuf/" class="md-tabs__link">
           
   
   
@@ -360,7 +252,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
+    <a href="../.." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -378,7 +270,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -397,10 +289,78 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Architectural%20choice/" class="md-nav__link">
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Distributed Systems
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Distributed Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Architectural choice
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -411,12 +371,64 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#monolithic-vs-microservices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monolithic vs. Microservices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monolithic vs. Microservices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#monolithic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monolithic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microservices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microservices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -436,9 +448,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -458,9 +471,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -480,22 +494,16 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Inter-Service%20Communication/" class="md-nav__link">
         
   
   
@@ -506,13 +514,13 @@
   
 
       </a>
-      
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -532,9 +540,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
@@ -551,6 +560,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -577,10 +594,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -593,8 +610,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             ProtoBuf
           </label>
@@ -607,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/Best%20Practices%20for%20Protobuf/" class="md-nav__link">
+      <a href="../../ProtoBuf/Best%20Practices%20for%20Protobuf/" class="md-nav__link">
         
   
   
@@ -630,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/Interface%20Definition%20Language/" class="md-nav__link">
+      <a href="../../ProtoBuf/Interface%20Definition%20Language/" class="md-nav__link">
         
   
   
@@ -653,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
+      <a href="../../ProtoBuf/ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
         
   
   
@@ -676,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/ProtoBuf%20Workflow/" class="md-nav__link">
+      <a href="../../ProtoBuf/ProtoBuf%20Workflow/" class="md-nav__link">
         
   
   
@@ -699,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/ProtoBuf/" class="md-nav__link">
+      <a href="../../ProtoBuf/ProtoBuf/" class="md-nav__link">
         
   
   
@@ -722,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/Protoc%20Compiler/" class="md-nav__link">
+      <a href="../../ProtoBuf/Protoc%20Compiler/" class="md-nav__link">
         
   
   
@@ -745,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ProtoBuf/Serializing%20and%20Deserializing%20in%20ProtoBuf/" class="md-nav__link">
+      <a href="../../ProtoBuf/Serializing%20and%20Deserializing%20in%20ProtoBuf/" class="md-nav__link">
         
   
   
@@ -786,6 +803,47 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#monolithic-vs-microservices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monolithic vs. Microservices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monolithic vs. Microservices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#monolithic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monolithic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microservices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microservices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -800,107 +858,113 @@
 
 
 
-  <h1>Inter Service Communication</h1>
+  <h1>Architectural choice</h1>
 
-<p>The way microservices communicate is a defining characteristic of the [[Architectural choice|architecture]], directly influencing performance, coupling, and resilience. A well-designed system often employs a mix of communication styles, choosing the right protocol for each specific interaction.</p>
-<p>there are mainly 2 different types of communication
-1. Synchronous Communication: Direct Request/Response
-    1. REST over HTTP (Most used) : simple, less complexity, json, stateless, wide support, readable, bad performance. 
-    2. gRPC : more complex, [[protobuf]], binary format (not readable), great performace 
-2. Asynchronous Communication: Event-Driven Architecture
-    1. Message Queues (RabbitMQ, Amazon SQS): This model is typically used for command-based communication, where a message represents a task to be performed. A producer sends a message to a specific queue, and a single consumer from a group of workers retrieves and processes that message. This pattern is excellent for distributing workloads, ensuring reliable task processing, and implementing load leveling to smooth out traffic spikes.
-    2. Event Streams / Publish - Suscribe (Apache kafka, Amazon SNS) : This model is the foundation of event-driven architectures and is used for broadcasting information. A producer service publishes an event—a record of something that has happened—to a topic. Any number of consumer services can subscribe to that topic and will receive a copy of the event to react to it independently. This pattern is ideal for notifying multiple parts of a system about a state change, such as an OrderPlaced or UserRegistered event. </p>
-<p>Asynchronous communication significantly improves system resilience and scalability. If a consumer service is temporarily unavailable, messages can be buffered in the broker and processed once the service recovers. This prevents failures from cascading. Furthermore, producers and consumers can be scaled independently based on their respective loads, and the non-blocking nature of the communication enhances the perceived responsiveness of the system. The main challenges are the added operational complexity of managing a message broker and the cognitive shift required to design and debug systems based on eventual consistency.</p>
-<p><strong>A mature microservice ecosystem is rarely built on a single communication style. Instead, it is a hybrid, where the choice of protocol is made on a link-by-link basis, tailored to the specific requirements of each interaction.</strong></p>
-<p>Table 1: Synchronous vs. Asynchronous Communication Trade-offs</p>
+<h2 id="monolithic-vs-microservices">Monolithic vs. Microservices</h2>
+<h4 id="monolithic">Monolithic</h4>
+<ul>
+<li>A single, unified codebase.</li>
+<li>All business functions are contained in a single application.</li>
+<li>All components are interdependent.</li>
+<li>The application is deployed as a single unit.</li>
+</ul>
+<p><strong>Pros:</strong></p>
+<ol>
+<li>
+<p>Better for small-scale teams.</p>
+</li>
+<li>
+<p>Simplicity and speed. Development is faster and deployment is straightforward.</p>
+</li>
+<li>
+<p>Tracing a request is easier.</p>
+</li>
+</ol>
+<p><strong>Cons:</strong> As it scales, all the pros turn into cons.</p>
+<ol>
+<li>
+<p>Slow development, unintended changes.</p>
+</li>
+<li>
+<p>Scaling becomes inefficient.</p>
+</li>
+<li>
+<p>A single error can compromise the availability of the entire application.</p>
+</li>
+<li>
+<p>New technology adoption is blocked.</p>
+</li>
+</ol>
+<h4 id="microservices">Microservices</h4>
+<ul>
+<li>A set of applications.</li>
+<li>Independent of each other.</li>
+<li>Loosely coupled, i.e., each service handles a different business function.</li>
+<li>Communicates through APIs.</li>
+</ul>
+<p><strong>Pros:</strong></p>
+<ol>
+<li>
+<p>Distinct scaling requirements can be handled.</p>
+</li>
+<li>
+<p>Enables technological diversity.</p>
+</li>
+<li>
+<p>Dramatically improves fault isolation.</p>
+</li>
+</ol>
+<p>Microservices solve a lot of problems that are present in a monolithic architecture. Adopting microservices is often driven by the need to scale the organization, not just the application. A large team working on a single monolithic codebase inevitably faces high coordination overhead, frequent merge conflicts, and a bottlenecked release pipeline.
+Microservices minimize cross-team communication overhead, enabling parallel development and deployment. Data consistency is one area where a monolithic architecture is often preferred, as it is easier to maintain strong consistency.</p>
+<p>[[When to create or extend a service]] ?</p>
 <table>
 <thead>
 <tr>
 <th>Dimension</th>
-<th>Synchronous Communication</th>
-<th>Asynchronous Communication</th>
+<th>Monolithic Architecture</th>
+<th>Microservices Architecture</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Coupling</td>
-<td>High temporal coupling. Client and server must be available simultaneously.</td>
-<td>Low coupling. Producer and consumer operate independently and do not need to be available at the same time.</td>
+<td><strong>Team Size</strong></td>
+<td>Ideal for small teams (&lt;10-15 developers) where communication is simple.</td>
+<td>Suitable for larger organizations with multiple teams that need to work independently.</td>
 </tr>
 <tr>
-<td>Latency</td>
-<td>Perceived latency is higher for the client, as it must block and wait for a response.</td>
-<td>Perceived latency is lower for the client (producer), as it does not wait for the operation to complete.</td>
+<td><strong>Development Speed</strong></td>
+<td>High initial velocity due to simplicity. Slower long-term velocity as complexity grows.</td>
+<td>Slower initial setup due to distributed system complexity. Higher long-term velocity for large teams.</td>
 </tr>
 <tr>
-<td>Fault Tolerance</td>
-<td>Lower. A failure in the server service directly impacts the client service. Can lead to cascading failures.</td>
-<td>Higher. A message broker can buffer messages if a consumer is down, allowing it to recover and process them later.</td>
+<td><strong>Scalability</strong></td>
+<td>Coarse-grained. The entire application must be scaled, even if only one component is a bottleneck.</td>
+<td>Fine-grained. Each service can be scaled independently, optimizing resource usage.</td>
 </tr>
 <tr>
-<td>Scalability</td>
-<td>More limited. Scalability is constrained by the ability of services to handle concurrent requests in real-time.</td>
-<td>Higher. Producers and consumers can be scaled independently based on message volume and processing time.</td>
+<td><strong>Deployment</strong></td>
+<td>Simple. A single artifact is deployed.</td>
+<td>Complex. Requires mature automation (CI/CD) and container orchestration for many services.</td>
 </tr>
 <tr>
-<td>Implementation Complexity</td>
-<td>Simpler to reason about and implement, as it follows a familiar request-response flow.</td>
-<td>More complex. Requires managing a message broker, handling eventual consistency, and debugging distributed workflows.</td>
-</tr>
-</tbody>
-</table>
-<p>Table 2: Comparison of REST, gRPC, and Message Queues</p>
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th>REST over HTTP</th>
-<th>gRPC</th>
-<th>Message Queues / Event Streams</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Communication Style</td>
-<td>Synchronous</td>
-<td>Synchronous</td>
-<td>Asynchronous</td>
+<td><strong>Operational Overhead</strong></td>
+<td>Low. Fewer moving parts to manage, monitor, and secure.</td>
+<td>High. Requires managing a distributed system, including service discovery, distributed tracing, and complex networking.</td>
 </tr>
 <tr>
-<td>Performance</td>
-<td>Moderate. Text-based (JSON) and HTTP/1.1 overhead.</td>
-<td>High. Binary format (Protobuf) and HTTP/2 transport.</td>
-<td>Varies. High throughput but introduces broker latency. Decouples processing time from request time.</td>
+<td><strong>Data Consistency</strong></td>
+<td>Strong consistency is easily achieved with a single, transactional database (ACID).</td>
+<td>Eventual consistency is the default. Achieving strong consistency across services is complex and requires patterns like Sagas.</td>
 </tr>
 <tr>
-<td>Data Format</td>
-<td>JSON (human-readable)</td>
-<td>Protocol Buffers (binary, not human-readable).</td>
-<td>Any format (JSON, Avro, Protobuf), managed by producer/consumer.</td>
+<td><strong>Fault Isolation</strong></td>
+<td>Low. An error in one module can bring down the entire application.</td>
+<td>High. Failure in one service is isolated and typically does not cascade to the entire system.</td>
 </tr>
 <tr>
-<td>Contract Enforcement</td>
-<td>Loose. Often relies on documentation (e.g., OpenAPI/Swagger).</td>
-<td>Strict. Contract-first via .proto files, enabling code generation and type safety.</td>
-<td>Varies. Can be strict with a schema registry (e.g., for Avro/Protobuf) or loose.</td>
-</tr>
-<tr>
-<td>Coupling</td>
-<td>Loosely coupled at the implementation level, but tightly coupled temporally.</td>
-<td>Tightly coupled at the contract level (client/server need .proto file) and temporally.</td>
-<td>Loosely coupled. Producer and consumer are fully decoupled.</td>
-</tr>
-<tr>
-<td>Developer Experience</td>
-<td>Simple and familiar. Excellent tooling and browser support.46</td>
-<td>Steeper learning curve. Requires specialized tooling for debugging. Limited browser support.</td>
-<td>Complex. Requires understanding of messaging concepts and managing a broker. Debugging is challenging.</td>
-</tr>
-<tr>
-<td>Typical Use Case</td>
-<td>Public-facing APIs, simple request-response interactions.</td>
-<td>High-performance internal service-to-service communication, streaming applications.</td>
-<td>Background jobs, event notification, decoupling services, data streaming pipelines.</td>
+<td><strong>Technology Stack</strong></td>
+<td>Homogeneous. Constrained by the technologies chosen at the outset.</td>
+<td>Heterogeneous (Polyglot). Each service can use the most appropriate language, framework, and database.</td>
 </tr>
 </tbody>
 </table>
@@ -958,10 +1022,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.expand", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.expand", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
