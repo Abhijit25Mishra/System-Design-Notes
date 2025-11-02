@@ -867,11 +867,11 @@
 
 <p>when a new microservice is being created. the most crucial task is to define its boundaries. A microservices value is directly tied to its autonomy and single minded focus. </p>
 <p>Poorly defined microservices lead to systemic problems, like overly chatty, data consistency issues, distributed monoliths.</p>
-<h3 id="why-ddd-is-essential">why DDD is essential ?<a class="headerlink" href="#why-ddd-is-essential" title="Permanent link">&para;</a></h3>
+<h3 id="why-ddd-is-essential">why DDD is essential ?</h3>
 <p>DDD is a software design methodology that advocates for modeling software based on the underlying <strong>business domain</strong>. Its core premise is that complex business logic should be at the heart of the application, and the software's structure should reflect the real-world processes and rules of the business. </p>
 <p>This philosophy aligns perfectly with the goals of microservices architecture. Microservices are intended to be organized around business capabilities, ensuring they have <strong>high functional cohesion (doing one thing well) and loose coupling (minimal dependency on other services).</strong></p>
 <p>DDD provides the tools to achieve this. It helps decompose a large, complex system into self-contained, understandable units by systematically analyzing business requirements.</p>
-<h4 id="strategic-ddd">Strategic DDD<a class="headerlink" href="#strategic-ddd" title="Permanent link">&para;</a></h4>
+<h4 id="strategic-ddd">Strategic DDD</h4>
 <p>Focuses on <strong>high-level, large-scale, structure of the system.</strong> It is a collaborative process that <strong>involves both software developers and domain experts</strong> (such as business analysts and product managers) to map out the problem space before designing the solution space.</p>
 <ol>
 <li>Ubiquitous Language: A cornerstone of DDD is the development of a Ubiquitous Language a common, rigorous, and unambiguous vocabulary shared by all stakeholders.</li>
@@ -879,7 +879,7 @@
 <li>In a microservices architecture, each Bounded Context is a prime candidate to become a microservice. This alignment ensures that each service owns a specific, well-defined part of the business domain, operates autonomously, and maintains its own internal consistency. Defining these boundaries is the most critical step; misdefined boundaries are a primary cause of tight coupling and architectural complexity.</li>
 <li>Context Maps: To manage the interactions between these boundaries, DDD uses Context Maps. These are diagrams that visualize the relationships between different Bounded Contexts, clarifying how the corresponding microservices will integrate.</li>
 </ol>
-<h4 id="tactical-ddd">Tactical DDD<a class="headerlink" href="#tactical-ddd" title="Permanent link">&para;</a></h4>
+<h4 id="tactical-ddd">Tactical DDD</h4>
 <p>Tactical DDD provides a set of design patterns for building the rich domain model inside a single Bounded Context. These patterns help structure the business logic in a way that is clean, maintainable, and decoupled from infrastructure concerns.</p>
 <ol>
 <li><strong>Entities: These are objects defined not by their attributes, but by their thread of continuity and a distinct, persistent identity.</strong></li>
@@ -887,7 +887,7 @@
 <li><strong>Aggregates: An Aggregate is a cluster of associated objects (Entities and Value Objects) that are treated as a single unit for the purpose of data changes. Each Aggregate has a root entity, known as the Aggregate Root, which is the sole entry point for any command that modifies the Aggregate. This structure is crucial for enforcing business rules and invariants, as the Aggregate Root ensures that the entire cluster of objects remains in a consistent state after any operation.</strong></li>
 </ol>
 <p>Aggregates are particularly important for microservice design. They represent a natural consistency boundary, meaning a single transaction should ideally not span multiple Aggregates. This concept maps directly to microservices, where Aggregates are often excellent candidates for the resources exposed by a service's API.</p>
-<h3 id="data-consistency-issue">Data Consistency Issue<a class="headerlink" href="#data-consistency-issue" title="Permanent link">&para;</a></h3>
+<h3 id="data-consistency-issue">Data Consistency Issue</h3>
 <p>Once a microservice's boundaries have been defined using Domain-Driven Design, the next logical step is to determine its data management strategy. The architectural choice to isolate services necessitates a corresponding isolation of their data. This leads to the adoption of the [[Database per Service pattern]], a foundational element of microservice design. While this pattern provides significant benefits in terms of autonomy and loose coupling, it introduces the profound challenge of maintaining data consistency and integrity in a distributed environment.</p>
 
 

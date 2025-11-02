@@ -958,16 +958,18 @@
 
   <h1>Interface Definition Language</h1>
 
-<h2 id="idl">IDL<a class="headerlink" href="#idl" title="Permanent link">&para;</a></h2>
+<h2 id="idl">IDL</h2>
 <p>The fundamental unit of data structure in [[Protobuf]] is the message. A message is a logical record of information, analogous to a class in Java or a struct in C++ or Go.</p>
-<h3 id="syntax">Syntax:<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h3>
+<h3 id="syntax">Syntax:</h3>
 <p>A message is declared using the message keyword, followed by its name and a pair of curly braces enclosing its field definitions.29</p>
 <p>```Protocol Buffers
 message SongRequest {<br />
   string song_name = 1;<br />
   int64 artist_id = 2;<br />
-}<br />
-<div class="highlight"><pre><span></span><code>### Naming Conventions:
+}  </p>
+<pre><code>
+
+### Naming Conventions:
 
 The official Protobuf style guide recommends using **TitleCase**  **for message names** and **lower_snake_case for field names**. Following these conventions ensures that the generated code is idiomatic in the target languages, as the compiler often transforms lower_snake_case into the conventional style of the target language (e.g., camelCase in Java).
 
@@ -984,9 +986,9 @@ message SearchResponse {
   }  
   repeated Result results = 1;  
 }  
-</code></pre></div></p>
+</code></pre>
 <p>Here, Result is a nested message type that can only be accessed within the context of SearchResponse (e.g., SearchResponse.Result in generated code).</p>
-<h3 id="importing">Importing:<a class="headerlink" href="#importing" title="Permanent link">&para;</a></h3>
+<h3 id="importing">Importing:</h3>
 <p>Messages can be defined out of the scope of the message, i.e in a different file, this can be later imported into the required message. </p>
 <blockquote>
 <p><strong>result.proto</strong>
@@ -998,8 +1000,9 @@ syntax = "proto3";</p>
 message Result {
   string url = 1;
   string title = 2;
-}
-<div class="highlight"><pre><span></span><code>&gt; **search_response.proto**
+}</p>
+<pre><code>
+&gt; **search_response.proto**
 ``` Protocol Buffers
 syntax = &quot;proto3&quot;;
 
@@ -1010,16 +1013,16 @@ import &quot;result.proto&quot;; // Import the external message definition
 message SearchResponse {
   repeated Result results = 1; // Use it directly since it shares the same package
 }
-</code></pre></div></p>
-<h2 id="field-numbertag">Field Number/Tag<a class="headerlink" href="#field-numbertag" title="Permanent link">&para;</a></h2>
-<h3 id="syntax_1">Syntax:<a class="headerlink" href="#syntax_1" title="Permanent link">&para;</a></h3>
+</code></pre>
+<h2 id="field-numbertag">Field Number/Tag</h2>
+<h3 id="syntax_1">Syntax:</h3>
 <p>Every field in a message must be assigned a unique positive integer number.</p>
 <blockquote>
 <p>type field_name = 1;</p>
 </blockquote>
-<h3 id="function">Function:<a class="headerlink" href="#function" title="Permanent link">&para;</a></h3>
+<h3 id="function">Function:</h3>
 <p>These field numbers, not the field names, are what identify the fields in the compact binary wire format. When a message is serialized, the output is a series of key-value pairs where the key is derived from the field number and a wire type. This design is a primary reason for Protobuf's efficiency and compactness, as it avoids sending verbose string keys (like in JSON) over the network.</p>
-<h3 id="uniqueness-and-immutability">Uniqueness and Immutability:<a class="headerlink" href="#uniqueness-and-immutability" title="Permanent link">&para;</a></h3>
+<h3 id="uniqueness-and-immutability">Uniqueness and Immutability:</h3>
 <p>The rules governing field numbers are strict and are the bedrock of Protobuf's schema evolution capabilities:</p>
 <ul>
 <li>The number must be unique within that message.</li>
@@ -1027,11 +1030,11 @@ message SearchResponse {
 <li>A field number from a deleted field should never be reused for a new field. Instead, the old number should be marked as reserved to prevent future accidents.</li>
 </ul>
 <p>Violating these rules can lead to severe data corruption, as a parser using a newer schema could completely misinterpret data written by an older one. The stability of these numbers is the central pillar of Protobuf's compatibility contract. This prioritization of long-term stability over short-term developer convenience necessitates strong governance over .proto files, including strict code review policies and the use of automated tools to prevent accidental changes to field numbers.</p>
-<h3 id="performance-implications">Performance Implications:<a class="headerlink" href="#performance-implications" title="Permanent link">&para;</a></h3>
+<h3 id="performance-implications">Performance Implications:</h3>
 <p>The choice of field number has a direct impact on the size of the serialized message. Field numbers in the range 1 through 15 require only one byte to encode the key (tag + wire type). Numbers in the range 16 through 2047 take two bytes. For this reason, the most frequently used or repeated fields should be assigned the lowest available field numbers.</p>
 <p>Reserved Ranges:</p>
 <p>The field numbers from 19,000 to 19,999 are reserved for the internal implementation of Protocol Buffers and cannot be used.</p>
-<h2 id="field-cardinality">Field Cardinality<a class="headerlink" href="#field-cardinality" title="Permanent link">&para;</a></h2>
+<h2 id="field-cardinality">Field Cardinality</h2>
 <p>Each field in a message must have a cardinality, which specifies how many times that field can appear.</p>
 <ul>
 <li>
@@ -1050,17 +1053,17 @@ message SearchResponse {
 <p>required Fields (proto2 only, Deprecated): This keyword, available only in proto2, specifies that a value for the field must be provided. While seemingly useful for validation, it proved to be extremely problematic for schema evolution. A field marked as required can never be safely made optional or removed without breaking older clients, which will reject messages that are missing the field. For this reason, its use is strongly discouraged, and it was removed entirely from proto3 and editions.</p>
 </li>
 </ul>
-<h2 id="services-for-rpc">Services for RPC<a class="headerlink" href="#services-for-rpc" title="Permanent link">&para;</a></h2>
+<h2 id="services-for-rpc">Services for RPC</h2>
 <p><strong>In addition to defining data structures, .proto files are the standard way to define service interfaces for RPC frameworks like gRPC.</strong></p>
-<h3 id="syntax_2">Syntax:<a class="headerlink" href="#syntax_2" title="Permanent link">&para;</a></h3>
+<h3 id="syntax_2">Syntax:</h3>
 <p>A service is defined using the service keyword, containing a list of rpc methods.  </p>
 <p><code>Protocol Buffers  
 service SearchService {  
   rpc Search(SearchRequest) returns (SearchResponse);  
 }</code> </p>
-<h3 id="rpc-methods">RPC Methods:<a class="headerlink" href="#rpc-methods" title="Permanent link">&para;</a></h3>
+<h3 id="rpc-methods">RPC Methods:</h3>
 <p>Each rpc method specifies its name, its request message type, and its response message type. The compiler uses this definition to generate client stubs and server interface skeletons.    </p>
-<h3 id="streaming">Streaming:<a class="headerlink" href="#streaming" title="Permanent link">&para;</a></h3>
+<h3 id="streaming">Streaming:</h3>
 <p>The stream keyword can be prepended to the request and/or response types to define different communication patterns, which are a core feature of gRPC: 
 - Unary RPC: rpc Method(Request) returns (Response); (the default)</p>
 <ul>

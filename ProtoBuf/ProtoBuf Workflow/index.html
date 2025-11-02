@@ -833,7 +833,7 @@
   <h1>ProtoBuf Workflow</h1>
 
 <p>[[ProtoBuf]] workflow fundamentally shifts development from a "code-first" to a "contract-first" paradigm, a change with significant implications for team collaboration and system architecture.</p>
-<h2 id="proto-file">.proto file<a class="headerlink" href="#proto-file" title="Permanent link">&para;</a></h2>
+<h2 id="proto-file">.proto file</h2>
 <p>The entire Protobuf workflow originates from a single artifact: the .proto file. This plain text file serves as the definitive contract, or schema, for the data being exchanged. It contains language-agnostic definitions of data structures, known as messages, and optionally, the interfaces for remote services, known as services. This file is the central point of agreement between different components of a distributed system, such as a client and a server. It is managed as a source code asset, version-controlled, and serves as the single source of truth for the API contract.</p>
 <p>The basic structure of a .proto file includes several key components:
 - Syntax/Edition Declaration: The first non-comment line must declare the version of the Protobuf language being used, for example, syntax = "proto3"; or edition = "2023";.

@@ -791,8 +791,8 @@
 <p>Once the .proto schema is defined, the next step is to use the Protocol Buffer compiler, protoc. This is a command-line tool that parses the .proto file and generates source code in a specified target programming language. This generated code provides the necessary classes, data structures, and methods to work with the defined messages in a native, idiomatic way for that language.</p>
 <p>The protoc compiler is designed with a highly extensible plugin architecture. The core protoc binary is responsible for parsing the .proto file into an abstract syntax tree. It then passes this representation to a language-specific plugin, which is responsible for the actual code generation.</p>
 <p>A typical invocation of the compiler from the command line looks like this:</p>
-<div class="highlight"><pre><span></span><code>protoc<span class="w"> </span>-I<span class="o">=</span>./protos<span class="w"> </span>--java_out<span class="o">=</span>./src/main/java./protos/my_message.proto
-</code></pre></div>
+<pre><code class="language-bash">protoc -I=./protos --java_out=./src/main/java./protos/my_message.proto
+</code></pre>
 <p>The key flags are:</p>
 <ul>
 <li>

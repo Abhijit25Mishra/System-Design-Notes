@@ -839,7 +839,7 @@
 
   <h1>Serializing and Deserializing in ProtoBuf</h1>
 
-<h2 id="serializing">Serializing<a class="headerlink" href="#serializing" title="Permanent link">&para;</a></h2>
+<h2 id="serializing">Serializing</h2>
 <p>The process of serializing a message typically involves three steps:</p>
 <ol>
 <li>
@@ -853,7 +853,7 @@
 </li>
 </ol>
 <p>The resulting binary data is not self-describing. It is a stream of key-value pairs, where the "key" is a combination of the field number and a wire type identifier, and the "value" is the encoded data payload. The field names and precise data types are not included in the payload. This is a fundamental reason for [[Serializing and Deserializing in ProtoBuf|Protobuf's efficiency]], but it also means that the exact same schema definition (or the code generated from it) is required to correctly interpret the data on the receiving end.</p>
-<h2 id="deserializing">Deserializing<a class="headerlink" href="#deserializing" title="Permanent link">&para;</a></h2>
+<h2 id="deserializing">Deserializing</h2>
 <p>The deserialization process is the mirror image of serialization:</p>
 <ol>
 <li>
