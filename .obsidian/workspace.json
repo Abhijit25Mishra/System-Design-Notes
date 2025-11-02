@@ -55,7 +55,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Best Practices for Protobuf.md",
+                "file": "docs/ProtoBuf/Best Practices for Protobuf.md",
                 "mode": "source",
                 "source": false
               },
@@ -137,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Best Practices for Protobuf.md",
+                "file": "docs/ProtoBuf/Best Practices for Protobuf.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Best Practices for Protobuf.md",
+                "file": "docs/ProtoBuf/Best Practices for Protobuf.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -185,7 +185,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Best Practices for Protobuf.md",
+                "file": "docs/ProtoBuf/Best Practices for Protobuf.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
@@ -249,10 +249,10 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "70250681444845d1",
+  "active": "247c65cde6556caf",
   "lastOpenFiles": [
     "docs/ProtoBuf/ProtoBuf VS JSON VS XML.md",
-    "Best Practices for Protobuf.md",
+    "docs/ProtoBuf/Best Practices for Protobuf.md",
     "docs/ProtoBuf/Interface Definition Language.md",
     "docs/ProtoBuf/ProtoBuf.md",
     "docs/ProtoBuf/Protoc Compiler.md",
