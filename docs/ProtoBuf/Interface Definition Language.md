@@ -1,7 +1,7 @@
 
 ## IDL 
 
-The fundamental unit of data structure in Protobuf is the message. A message is a logical record of information, analogous to a class in Java or a struct in C++ or Go.
+The fundamental unit of data structure in [[Protobuf]] is the message. A message is a logical record of information, analogous to a class in Java or a struct in C++ or Go.
 
 ### Syntax:
 

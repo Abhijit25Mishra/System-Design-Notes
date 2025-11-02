@@ -1,6 +1,6 @@
 
 
-The long-term success of a system built on Protobuf depends heavily on the quality and maintainability of its .proto files. Adhering to best practices is not merely a matter of style but a crucial element of future-proofing the API.
+The long-term success of a system built on [[ProtoBuf]] depends heavily on the quality and maintainability of its .proto files. Adhering to best practices is not merely a matter of style but a crucial element of future-proofing the API.
 
 ### File Organization:
 Logically group related messages and services within the same .proto file. For message types that are expected to be widely used across many different services or projects (e.g., a common Money or Timestamp message), it is best to place them in their own separate file with no other dependencies. This promotes reusability and minimizes dependency bloat.

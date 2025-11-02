@@ -9,7 +9,7 @@ The process of serializing a message typically involves three steps:
 
 3. Serialization: Call one of the serialization methods (e.g., SerializeToString() or toByteArray()) on the final message object. This executes the highly optimized serialization logic, converting the in-memory object into a compact byte array ready for transmission or storage.
 
-The resulting binary data is not self-describing. It is a stream of key-value pairs, where the "key" is a combination of the field number and a wire type identifier, and the "value" is the encoded data payload. The field names and precise data types are not included in the payload. This is a fundamental reason for Protobuf's efficiency, but it also means that the exact same schema definition (or the code generated from it) is required to correctly interpret the data on the receiving end.
+The resulting binary data is not self-describing. It is a stream of key-value pairs, where the "key" is a combination of the field number and a wire type identifier, and the "value" is the encoded data payload. The field names and precise data types are not included in the payload. This is a fundamental reason for [[Serializing and Deserializing in ProtoBuf|Protobuf's efficiency]], but it also means that the exact same schema definition (or the code generated from it) is required to correctly interpret the data on the receiving end.
 
 ## Deserializing
 
