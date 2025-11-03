@@ -13,30 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Distributed Systems/Architectural choice.md",
+                "file": "docs/Distributed Systems/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Architectural choice"
-            }
-          },
-          {
-            "id": "9f82890d70c3864c",
-            "type": "leaf",
-            "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": "docs/ProtoBuf/Interface Definition Language.md",
-                "bFile": "docs/ProtoBuf/Interface Definition Language.md",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: Interface Definition Language"
+              "title": "index"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "docs/Distributed Systems/index.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for index"
             }
           },
           {
@@ -127,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "docs/Distributed Systems/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from index"
             }
           },
           {
@@ -155,12 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "docs/Distributed Systems/index.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of index"
             }
           },
           {
@@ -218,9 +206,12 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "9f82890d70c3864c",
+  "active": "c5c2bb61b31668e8",
   "lastOpenFiles": [
+    "docs/Microservices Patterns/SAGA pattern.md",
+    "docs/Microservices Patterns/Database per Service pattern.md",
     "docs/Distributed Systems/Architectural choice.md",
+    "docs/Microservices Patterns",
     "docs/ProtoBuf/Interface Definition Language.md",
     "docs/ProtoBuf/Protoc Compiler.md",
     "docs/ProtoBuf/ProtoBuf Workflow.md",
@@ -237,10 +228,8 @@
     "docs/ProtoBuf/Best Practices for Protobuf.md",
     "Protobuf compiler.md",
     "docs/Distributed Systems/When to create or extend a service.md",
-    "docs/Distributed Systems/Database per Service pattern.md",
     "docs/Distributed Systems/Domain Driven Design.md",
     "docs/ProtoBuf",
-    "docs/Distributed Systems/SAGA pattern.md",
     "docs/Distributed Systems/Inter-Service Communication.md",
     "docs/Distributed Systems/Event Sourcing.md",
     "docs",
@@ -253,7 +242,6 @@
     "ProtoBuf/ProtoBuf Workflow.md",
     "Inter-Service Communication.md",
     "ProtoBuf",
-    "copilot/copilot-conversations",
-    "copilot/copilot-custom-prompts"
+    "copilot/copilot-conversations"
   ]
 }
