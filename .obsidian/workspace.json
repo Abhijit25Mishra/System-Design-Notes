@@ -206,12 +206,12 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "c5c2bb61b31668e8",
+  "active": "247c65cde6556caf",
   "lastOpenFiles": [
-    "docs/Microservices Patterns/SAGA pattern.md",
-    "docs/Microservices Patterns/Database per Service pattern.md",
+    "docs/Distributed Systems/Microservices Patterns/SAGA pattern.md",
+    "docs/Distributed Systems/Microservices Patterns/Database per Service pattern.md",
     "docs/Distributed Systems/Architectural choice.md",
-    "docs/Microservices Patterns",
+    "docs/Distributed Systems/Microservices Patterns",
     "docs/ProtoBuf/Interface Definition Language.md",
     "docs/ProtoBuf/Protoc Compiler.md",
     "docs/ProtoBuf/ProtoBuf Workflow.md",
