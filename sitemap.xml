@@ -2,70 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://abhijit25mishra.github.io/System-Design-Notes/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-03</lastmod>
     </url>
     <url>
          <loc>https://abhijit25mishra.github.io/System-Design-Notes/Distributed%20Systems/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-03</lastmod>
     </url>
     <url>
          <loc>https://abhijit25mishra.github.io/System-Design-Notes/Distributed%20Systems/Architectural%20choice/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-03</lastmod>
     </url>
     <url>
          <loc>https://abhijit25mishra.github.io/System-Design-Notes/Distributed%20Systems/Database%20per%20Service%20pattern/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-03</lastmod>
     </url>
     <url>
          <loc>https://abhijit25mishra.github.io/System-Design-Notes/Distributed%20Systems/Domain%20Driven%20Design/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-03</lastmod>
     </url>
     <url>
          <loc>https://abhijit25mishra.github.io/System-Design-Notes/Distributed%20Systems/Event%20Sourcing/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-03</lastmod>
     </url>
     <url>
          <loc>https://abhijit25mishra.github.io/System-Design-Notes/Distributed%20Systems/Inter-Service%20Communication/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-03</lastmod>
     </url>
     <url>
          <loc>https://abhijit25mishra.github.io/System-Design-Notes/Distributed%20Systems/SAGA%20pattern/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-03</lastmod>
     </url>
     <url>
          <loc>https://abhijit25mishra.github.io/System-Design-Notes/Distributed%20Systems/When%20to%20create%20or%20extend%20a%20service/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-03</lastmod>
     </url>
     <url>
          <loc>https://abhijit25mishra.github.io/System-Design-Notes/ProtoBuf/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-03</lastmod>
     </url>
     <url>
          <loc>https://abhijit25mishra.github.io/System-Design-Notes/ProtoBuf/Best%20Practices%20for%20Protobuf/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-03</lastmod>
     </url>
     <url>
          <loc>https://abhijit25mishra.github.io/System-Design-Notes/ProtoBuf/Interface%20Definition%20Language/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-03</lastmod>
     </url>
     <url>
          <loc>https://abhijit25mishra.github.io/System-Design-Notes/ProtoBuf/ProtoBuf%20VS%20JSON%20VS%20XML/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-03</lastmod>
     </url>
     <url>
          <loc>https://abhijit25mishra.github.io/System-Design-Notes/ProtoBuf/ProtoBuf%20Workflow/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-03</lastmod>
     </url>
     <url>
          <loc>https://abhijit25mishra.github.io/System-Design-Notes/ProtoBuf/ProtoBuf/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-03</lastmod>
     </url>
     <url>
          <loc>https://abhijit25mishra.github.io/System-Design-Notes/ProtoBuf/Protoc%20Compiler/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-03</lastmod>
     </url>
     <url>
          <loc>https://abhijit25mishra.github.io/System-Design-Notes/ProtoBuf/Serializing%20and%20Deserializing%20in%20ProtoBuf/</loc>
-         <lastmod>2025-11-02</lastmod>
+         <lastmod>2025-11-03</lastmod>
     </url>
 </urlset>
