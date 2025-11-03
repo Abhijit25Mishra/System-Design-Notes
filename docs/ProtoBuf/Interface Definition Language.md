@@ -79,6 +79,7 @@ Every field in a message must be assigned a unique positive integer number.
 
 These field numbers, not the field names, are what identify the fields in the compact binary wire format. When a message is serialized, the output is a series of key-value pairs where the key is derived from the field number and a wire type. This design is a primary reason for Protobuf's efficiency and compactness, as it avoids sending verbose string keys (like in JSON) over the network.
 
+
 ### Uniqueness and Immutability:
 
 The rules governing field numbers are strict and are the bedrock of Protobuf's schema evolution capabilities:
