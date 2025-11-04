@@ -208,6 +208,8 @@
   },
   "active": "247c65cde6556caf",
   "lastOpenFiles": [
+    "distributedSystems.pages",
+    "protobuf.pages",
     "docs/Distributed Systems/Microservices Patterns/SAGA pattern.md",
     "docs/Distributed Systems/Microservices Patterns/Database per Service pattern.md",
     "docs/Distributed Systems/Architectural choice.md",
@@ -241,7 +243,6 @@
     "ProtoBuf/ProtoBuf.md",
     "ProtoBuf/ProtoBuf Workflow.md",
     "Inter-Service Communication.md",
-    "ProtoBuf",
-    "copilot/copilot-conversations"
+    "ProtoBuf"
   ]
 }
