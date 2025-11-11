@@ -8,29 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://abhijit25mishra.github.io/System-Design-Notes/">
+        <link rel="canonical" href="https://abhijit25mishra.github.io/System-Design-Notes/Distributed%20Systems/Architectural-Style/Architectural%20choice/">
       
       
+        <link rel="prev" href="../">
       
-        <link rel="next" href="Distributed%20Systems/Domain%20Driven%20Design/">
+      
+        <link rel="next" href="../../Microservices-Patterns/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>System Design Notes</title>
+        <title>Architectural Choices - System Design Notes</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#system-design-notes" class="md-skip">
+        <a href="#architectural-choices" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="System Design Notes" class="md-header__button md-logo" aria-label="System Design Notes" data-md-component="logo">
+    <a href="../../.." title="System Design Notes" class="md-header__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              System Design Notes
+              Architectural Choices
             
           </span>
         </div>
@@ -230,7 +232,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
+    <a href="../../.." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -257,37 +259,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    System Design Notes
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -303,37 +278,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#quick-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick links
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -342,6 +286,8 @@
       
   
   
+    
+  
   
   
     
@@ -367,15 +313,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="Distributed%20Systems/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -399,7 +345,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -417,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Distributed%20Systems/Domain%20Driven%20Design/" class="md-nav__link">
+      <a href="../../Domain%20Driven%20Design/" class="md-nav__link">
         
   
   
@@ -445,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Distributed%20Systems/Event%20Sourcing/" class="md-nav__link">
+      <a href="../../Event%20Sourcing/" class="md-nav__link">
         
   
   
@@ -473,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Distributed%20Systems/Inter-Service%20Communication/" class="md-nav__link">
+      <a href="../../Inter-Service%20Communication/" class="md-nav__link">
         
   
   
@@ -501,7 +447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Distributed%20Systems/When%20to%20create%20or%20extend%20a%20service/" class="md-nav__link">
+      <a href="../../When%20to%20create%20or%20extend%20a%20service/" class="md-nav__link">
         
   
   
@@ -526,6 +472,8 @@
                 
   
   
+    
+  
   
   
     
@@ -541,15 +489,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="Distributed%20Systems/Architectural-Style/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -573,7 +521,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -590,10 +538,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Distributed%20Systems/Architectural-Style/Architectural%20choice/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architectural Choices
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -609,6 +584,126 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#monolithic-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monolithic Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monolithic Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disadvantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disadvantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microservices-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microservices Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Microservices Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advantages_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advantages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Benefits
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-creation-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Creation Decision
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture Comparison
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -651,7 +746,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="Distributed%20Systems/Microservices-Patterns/" class="md-nav__link ">
+            <a href="../../Microservices-Patterns/" class="md-nav__link ">
               
   
   
@@ -695,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Distributed%20Systems/Microservices-Patterns/Database%20per%20Service%20pattern/" class="md-nav__link">
+      <a href="../../Microservices-Patterns/Database%20per%20Service%20pattern/" class="md-nav__link">
         
   
   
@@ -723,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Distributed%20Systems/Microservices-Patterns/SAGA%20pattern/" class="md-nav__link">
+      <a href="../../Microservices-Patterns/SAGA%20pattern/" class="md-nav__link">
         
   
   
@@ -800,7 +895,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="ProtoBuf/" class="md-nav__link ">
+            <a href="../../../ProtoBuf/" class="md-nav__link ">
               
   
   
@@ -844,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ProtoBuf/ProtoBuf/" class="md-nav__link">
+      <a href="../../../ProtoBuf/ProtoBuf/" class="md-nav__link">
         
   
   
@@ -872,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ProtoBuf/ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
+      <a href="../../../ProtoBuf/ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
         
   
   
@@ -900,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ProtoBuf/ProtoBuf%20Workflow/" class="md-nav__link">
+      <a href="../../../ProtoBuf/ProtoBuf%20Workflow/" class="md-nav__link">
         
   
   
@@ -928,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ProtoBuf/Protoc%20Compiler/" class="md-nav__link">
+      <a href="../../../ProtoBuf/Protoc%20Compiler/" class="md-nav__link">
         
   
   
@@ -956,7 +1051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ProtoBuf/Best%20Practices%20for%20Protobuf/" class="md-nav__link">
+      <a href="../../../ProtoBuf/Best%20Practices%20for%20Protobuf/" class="md-nav__link">
         
   
   
@@ -984,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ProtoBuf/Interface%20Definition%20Language/" class="md-nav__link">
+      <a href="../../../ProtoBuf/Interface%20Definition%20Language/" class="md-nav__link">
         
   
   
@@ -1012,7 +1107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ProtoBuf/Serializing%20and%20Deserializing%20in%20ProtoBuf/" class="md-nav__link">
+      <a href="../../../ProtoBuf/Serializing%20and%20Deserializing%20in%20ProtoBuf/" class="md-nav__link">
         
   
   
@@ -1057,7 +1152,7 @@
 
 
   
-    <a href="https://github.com/abhijit25mishra/System-Design-Notes/edit/main/docs/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/abhijit25mishra/System-Design-Notes/edit/main/docs/Distributed Systems/Architectural-Style/Architectural choice.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1065,13 +1160,157 @@
   
 
 
-<h1 id="system-design-notes">System Design Notes<a class="headerlink" href="#system-design-notes" title="Permanent link">&para;</a></h1>
-<p>Welcome to System Design Notes, a curated collection of computer science and distributed systems.</p>
-<h2 id="quick-links">Quick links<a class="headerlink" href="#quick-links" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="Distributed%20Systems/">Distributed Systems</a></li>
-<li><a href="ProtoBuf/">ProtoBuf</a></li>
-</ul>
+<h1 id="architectural-choices">Architectural Choices<a class="headerlink" href="#architectural-choices" title="Permanent link">&para;</a></h1>
+<p>This document compares two main architectural patterns: Monolithic and Microservices architectures.</p>
+<h2 id="monolithic-architecture">Monolithic Architecture<a class="headerlink" href="#monolithic-architecture" title="Permanent link">&para;</a></h2>
+<p>A monolithic architecture is characterized by:
+- Single, unified codebase
+- All business functions in one application
+- Interdependent components
+- Single-unit deployment</p>
+<h3 id="advantages">Advantages<a class="headerlink" href="#advantages" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Team Size Compatibility</strong></li>
+<li>Ideal for small-scale teams</li>
+<li>
+<p>Easier team coordination</p>
+</li>
+<li>
+<p><strong>Development Simplicity</strong></p>
+</li>
+<li>Faster development cycles</li>
+<li>
+<p>Straightforward deployment process</p>
+</li>
+<li>
+<p><strong>Request Tracing</strong></p>
+</li>
+<li>Easier to trace and debug requests</li>
+<li>Single codebase to search</li>
+</ol>
+<h3 id="disadvantages">Disadvantages<a class="headerlink" href="#disadvantages" title="Permanent link">&para;</a></h3>
+<p>As the application scales, advantages often become challenges:</p>
+<ol>
+<li><strong>Development Speed</strong></li>
+<li>Slower development cycles</li>
+<li>
+<p>Higher risk of unintended side effects</p>
+</li>
+<li>
+<p><strong>Scaling Issues</strong></p>
+</li>
+<li>Inefficient resource utilization</li>
+<li>
+<p>Must scale entire application</p>
+</li>
+<li>
+<p><strong>Reliability Concerns</strong></p>
+</li>
+<li>Single points of failure</li>
+<li>
+<p>One error affects entire application</p>
+</li>
+<li>
+<p><strong>Technology Constraints</strong></p>
+</li>
+<li>Difficult to adopt new technologies</li>
+<li>Stack decisions affect entire application</li>
+</ol>
+<h2 id="microservices-architecture">Microservices Architecture<a class="headerlink" href="#microservices-architecture" title="Permanent link">&para;</a></h2>
+<p>A microservices architecture consists of:
+- Multiple independent applications
+- Services operate independently
+- Loose coupling between services
+- Each service handles specific business functions
+- Communicates through APIs.</p>
+<h3 id="advantages_1">Advantages<a class="headerlink" href="#advantages_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Flexible Scaling</strong></li>
+<li>Handle distinct scaling requirements</li>
+<li>Scale services independently</li>
+<li>
+<p>Optimize resource usage</p>
+</li>
+<li>
+<p><strong>Technology Freedom</strong></p>
+</li>
+<li>Enable technological diversity</li>
+<li>Choose best tools for each service</li>
+<li>
+<p>Easier to adopt new technologies</p>
+</li>
+<li>
+<p><strong>Improved Reliability</strong></p>
+</li>
+<li>Better fault isolation</li>
+<li>Failures don't cascade easily</li>
+<li>Higher system resilience</li>
+</ol>
+<h3 id="key-benefits">Key Benefits<a class="headerlink" href="#key-benefits" title="Permanent link">&para;</a></h3>
+<p>Microservices solve many problems present in monolithic architectures. The adoption is often driven by organizational scaling needs rather than just technical requirements. </p>
+<p>When working with a monolithic codebase, large teams face:
+- High coordination overhead
+- Frequent merge conflicts
+- Bottlenecked release pipeline</p>
+<p>Microservices help by:
+- Minimizing cross-team communication overhead
+- Enabling parallel development
+- Supporting independent deployment</p>
+<p>However, data consistency is one area where monolithic architectures often have an advantage, as they can more easily maintain strong consistency across the application.</p>
+<h2 id="service-creation-decision">Service Creation Decision<a class="headerlink" href="#service-creation-decision" title="Permanent link">&para;</a></h2>
+<p>For guidance on when to create new services or extend existing ones, see [[When to create or extend a service]].</p>
+<h2 id="architecture-comparison">Architecture Comparison<a class="headerlink" href="#architecture-comparison" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Monolithic Architecture</th>
+<th>Microservices Architecture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Team Size</strong></td>
+<td>Ideal for small teams (&lt;10-15 developers) where communication is simple.</td>
+<td>Suitable for larger organizations with multiple teams that need to work independently.</td>
+</tr>
+<tr>
+<td><strong>Development Speed</strong></td>
+<td>High initial velocity due to simplicity. Slower long-term velocity as complexity grows.</td>
+<td>Slower initial setup due to distributed system complexity. Higher long-term velocity for large teams.</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Coarse-grained. The entire application must be scaled, even if only one component is a bottleneck.</td>
+<td>Fine-grained. Each service can be scaled independently, optimizing resource usage.</td>
+</tr>
+<tr>
+<td><strong>Deployment</strong></td>
+<td>Simple. A single artifact is deployed.</td>
+<td>Complex. Requires mature automation (CI/CD) and container orchestration for many services.</td>
+</tr>
+<tr>
+<td><strong>Operational Overhead</strong></td>
+<td>Low. Fewer moving parts to manage, monitor, and secure.</td>
+<td>High. Requires managing a distributed system, including service discovery, distributed tracing, and complex networking.</td>
+</tr>
+<tr>
+<td><strong>Data Consistency</strong></td>
+<td>Strong consistency is easily achieved with a single, transactional database (ACID).</td>
+<td>Eventual consistency is the default. Achieving strong consistency across services is complex and requires patterns like Sagas.</td>
+</tr>
+<tr>
+<td><strong>Fault Isolation</strong></td>
+<td>Low. An error in one module can bring down the entire application.</td>
+<td>High. Failure in one service is isolated and typically does not cascade to the entire system.</td>
+</tr>
+<tr>
+<td><strong>Technology Stack</strong></td>
+<td>Homogeneous. Constrained by the technologies chosen at the outset.</td>
+<td>Heterogeneous (Polyglot). Each service can use the most appropriate language, framework, and database.</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1154,10 +1393,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.indexes", "navigation.tracking", "navigation.top", "search.highlight", "search.suggest", "toc.integrate", "content.code.copy", "content.action.edit", "header.autohide"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.indexes", "navigation.tracking", "navigation.top", "search.highlight", "search.suggest", "toc.integrate", "content.code.copy", "content.action.edit", "header.autohide"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
     
   </body>
