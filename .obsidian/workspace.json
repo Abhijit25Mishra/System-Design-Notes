@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "3b1f33c3e75a4377",
+        "id": "53175bb95b7b000b",
         "type": "tabs",
         "children": [
           {
-            "id": "c5c2bb61b31668e8",
+            "id": "84b466a6817a5ad4",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: workspace.json"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -205,13 +201,14 @@
   },
   "active": "247c65cde6556caf",
   "lastOpenFiles": [
+    "docs/gRPC",
     "readme.md",
     "docs/Distributed Systems/Architectural style/Architectural choice.md",
     "docs/Distributed Systems/index.md",
     "docs/ProtoBuf/index.md",
     "docs/Distributed Systems/Architectural style",
-    "distributedSystems.pages",
-    "protobuf.pages",
+    "docs/Distributed Systems/distributedSystems.pages",
+    "docs/ProtoBuf/protobuf.pages",
     "docs/Distributed Systems/Microservices Patterns/SAGA pattern.md",
     "docs/Distributed Systems/Microservices Patterns/Database per Service pattern.md",
     "docs/Distributed Systems/Microservices Patterns",
@@ -239,7 +236,6 @@
     "Database per Service pattern.md",
     "README.md",
     "ProtoBuf/ProtoBuf.md",
-    "ProtoBuf/ProtoBuf Workflow.md",
-    "Inter-Service Communication.md"
+    "ProtoBuf/ProtoBuf Workflow.md"
   ]
 }
