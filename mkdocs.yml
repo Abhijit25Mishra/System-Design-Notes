@@ -45,7 +45,6 @@ edit_uri: edit/main/docs/
 plugins:
     - awesome-pages:
           collapse_single_pages: true
-          # ignore_pages_files: true
     - search
 
 extra:
