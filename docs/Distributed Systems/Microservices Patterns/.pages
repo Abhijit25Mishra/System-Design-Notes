@@ -1,0 +1,5 @@
+title: Microservices Patterns
+arrange:
+  - index.md
+  - Database per Service pattern.md
+  - SAGA pattern.md

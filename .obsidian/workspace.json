@@ -208,6 +208,8 @@
   },
   "active": "84b466a6817a5ad4",
   "lastOpenFiles": [
+    "docs/Distributed Systems/Architectural style/New Text Document.txt",
+    "docs/Distributed Systems/Architectural style/New folder",
     "docs/gRPC",
     "readme.md",
     "docs/Distributed Systems/Architectural style/Architectural choice.md",
@@ -237,8 +239,6 @@
     "docs/ProtoBuf",
     "docs/Distributed Systems/Inter-Service Communication.md",
     "docs/Distributed Systems/Event Sourcing.md",
-    "docs",
-    "New folder",
     "mkdocs.yml.md",
     "Database per Service pattern.md",
     "README.md",
