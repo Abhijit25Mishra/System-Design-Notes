@@ -4,5 +4,5 @@ arrange:
   - Event Sourcing.md
   - Inter-Service Communication.md
   - When to create or extend a service.md
-  - Architectural style/
-  - Microservices Patterns/
+  - Architectural-Style/
+  - Microservices-Patterns/

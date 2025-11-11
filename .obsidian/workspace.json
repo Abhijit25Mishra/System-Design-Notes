@@ -208,6 +208,13 @@
   },
   "active": "247c65cde6556caf",
   "lastOpenFiles": [
+    "docs/Distributed Systems/Microservices-Patterns/SAGA pattern.md",
+    "docs/Distributed Systems/Microservices-Patterns/index.md",
+    "docs/Distributed Systems/Microservices-Patterns/Database per Service pattern.md",
+    "docs/Distributed Systems/Microservices-Patterns",
+    "docs/Distributed Systems/Architectural-Style/index.md",
+    "docs/Distributed Systems/Architectural-Style/Architectural choice.md",
+    "docs/Distributed Systems/Architectural-Style",
     "docs/Distributed Systems/Microservices Patterns/index.md",
     "docs/Distributed Systems/Architectural style/index.md",
     "docs/Distributed Systems/Inter-Service Communication.md",
@@ -231,18 +238,11 @@
     "docs/ProtoBuf/ProtoBuf.md",
     "docs/index.md",
     "docs/ProtoBuf/New Text Document.txt",
-    "docs/Distributed Systems/New Text Document.txt",
     "docs/Distributed Systems/Untitled.md",
-    "docs/Distributed Systems",
     "docs/ProtoBuf/Serializing and Deserializing in ProtoBuf.md",
     "docs/ProtoBuf/Best Practices for Protobuf.md",
     "Protobuf compiler.md",
     "docs/Distributed Systems/When to create or extend a service.md",
-    "docs/Distributed Systems/Domain Driven Design.md",
-    "docs/Distributed Systems/Event Sourcing.md",
-    "mkdocs.yml.md",
-    "Database per Service pattern.md",
-    "README.md",
-    "ProtoBuf/ProtoBuf.md"
+    "docs/Distributed Systems/Domain Driven Design.md"
   ]
 }
