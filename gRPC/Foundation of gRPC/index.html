@@ -8,31 +8,31 @@
       
       
       
-        <link rel="canonical" href="https://abhijit25mishra.github.io/System-Design-Notes/ProtoBuf/">
+        <link rel="canonical" href="https://abhijit25mishra.github.io/System-Design-Notes/gRPC/Foundation%20of%20gRPC/">
       
       
-        <link rel="prev" href="../Distributed%20Systems/">
+        <link rel="prev" href="../../ProtoBuf/Serializing%20and%20Deserializing%20in%20ProtoBuf/">
       
       
-        <link rel="next" href="ProtoBuf/">
+        <link rel="next" href="../gRPC/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>Protocol Buffers (ProtoBuf) - System Design Notes</title>
+        <title>Foundation of gRPC - System Design Notes</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#protocol-buffers-protobuf" class="md-skip">
+        <a href="#contract-first-philosophy" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="System Design Notes" class="md-header__button md-logo" aria-label="System Design Notes" data-md-component="logo">
+    <a href="../.." title="System Design Notes" class="md-header__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Protocol Buffers (ProtoBuf)
+              Foundation of gRPC
             
           </span>
         </div>
@@ -232,7 +232,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
+    <a href="../.." title="System Design Notes" class="md-nav__button md-logo" aria-label="System Design Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -262,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -319,7 +319,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../Distributed%20Systems/" class="md-nav__link ">
+            <a href="../../Distributed%20Systems/" class="md-nav__link ">
               
   
   
@@ -361,7 +361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Distributed%20Systems/Domain%20Driven%20Design/" class="md-nav__link">
+      <a href="../../Distributed%20Systems/Domain%20Driven%20Design/" class="md-nav__link">
         
   
   
@@ -389,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Distributed%20Systems/Event%20Sourcing/" class="md-nav__link">
+      <a href="../../Distributed%20Systems/Event%20Sourcing/" class="md-nav__link">
         
   
   
@@ -417,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Distributed%20Systems/Inter-Service%20Communication/" class="md-nav__link">
+      <a href="../../Distributed%20Systems/Inter-Service%20Communication/" class="md-nav__link">
         
   
   
@@ -445,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Distributed%20Systems/When%20to%20create%20or%20extend%20a%20service/" class="md-nav__link">
+      <a href="../../Distributed%20Systems/When%20to%20create%20or%20extend%20a%20service/" class="md-nav__link">
         
   
   
@@ -493,7 +493,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../Distributed%20Systems/Architectural-Style/" class="md-nav__link ">
+            <a href="../../Distributed%20Systems/Architectural-Style/" class="md-nav__link ">
               
   
   
@@ -537,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Distributed%20Systems/Architectural-Style/Architectural%20choice/" class="md-nav__link">
+      <a href="../../Distributed%20Systems/Architectural-Style/Architectural%20choice/" class="md-nav__link">
         
   
   
@@ -595,7 +595,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../Distributed%20Systems/Microservices-Patterns/" class="md-nav__link ">
+            <a href="../../Distributed%20Systems/Microservices-Patterns/" class="md-nav__link ">
               
   
   
@@ -639,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Distributed%20Systems/Microservices-Patterns/Database%20per%20Service%20pattern/" class="md-nav__link">
+      <a href="../../Distributed%20Systems/Microservices-Patterns/Database%20per%20Service%20pattern/" class="md-nav__link">
         
   
   
@@ -667,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Distributed%20Systems/Microservices-Patterns/SAGA%20pattern/" class="md-nav__link">
+      <a href="../../Distributed%20Systems/Microservices-Patterns/SAGA%20pattern/" class="md-nav__link">
         
   
   
@@ -709,8 +709,6 @@
       
   
   
-    
-  
   
   
     
@@ -738,15 +736,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../ProtoBuf/" class="md-nav__link ">
               
   
   
@@ -764,13 +762,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -790,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ProtoBuf/" class="md-nav__link">
+      <a href="../../ProtoBuf/ProtoBuf/" class="md-nav__link">
         
   
   
@@ -818,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
+      <a href="../../ProtoBuf/ProtoBuf%20VS%20JSON%20VS%20XML/" class="md-nav__link">
         
   
   
@@ -846,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ProtoBuf%20Workflow/" class="md-nav__link">
+      <a href="../../ProtoBuf/ProtoBuf%20Workflow/" class="md-nav__link">
         
   
   
@@ -874,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Protoc%20Compiler/" class="md-nav__link">
+      <a href="../../ProtoBuf/Protoc%20Compiler/" class="md-nav__link">
         
   
   
@@ -902,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Best%20Practices%20for%20Protobuf/" class="md-nav__link">
+      <a href="../../ProtoBuf/Best%20Practices%20for%20Protobuf/" class="md-nav__link">
         
   
   
@@ -930,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Interface%20Definition%20Language/" class="md-nav__link">
+      <a href="../../ProtoBuf/Interface%20Definition%20Language/" class="md-nav__link">
         
   
   
@@ -958,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Serializing%20and%20Deserializing%20in%20ProtoBuf/" class="md-nav__link">
+      <a href="../../ProtoBuf/Serializing%20and%20Deserializing%20in%20ProtoBuf/" class="md-nav__link">
         
   
   
@@ -990,8 +988,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1003,11 +1003,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -1028,7 +1028,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1043,10 +1043,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../gRPC/Foundation%20of%20gRPC/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foundation of gRPC
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1062,6 +1087,57 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contract-first-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contract first philosophy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devlopers-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Devlopers workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        grpc
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1074,7 +1150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gRPC/gRPC/" class="md-nav__link">
+      <a href="../gRPC/" class="md-nav__link">
         
   
   
@@ -1119,7 +1195,7 @@
 
 
   
-    <a href="https://github.com/abhijit25mishra/System-Design-Notes/edit/main/docs/ProtoBuf/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/abhijit25mishra/System-Design-Notes/edit/main/docs/gRPC/Foundation of gRPC.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1127,18 +1203,42 @@
   
 
 
-<h1 id="protocol-buffers-protobuf">Protocol Buffers (ProtoBuf)<a class="headerlink" href="#protocol-buffers-protobuf" title="Permanent link">&para;</a></h1>
-<p>This section collects notes, best practices, and workflow guidance for Protocol Buffers (ProtoBuf).</p>
-<p>ProtoBuf is a compact, efficient binary serialization format and IDL used for defining messages and RPC services. The pages in this folder cover:</p>
+<p>gRPC is a <strong>"contract-first" philosophy</strong>, which is enforced by its default [[Interface Definition Language|Interface Definition Language (IDL)]], [[ProtoBuf | protocol buffers]].</p>
+<p>It uses protobuf by default for both its IDL for defining service contracts and underlying message interchange format for serialization. </p>
+<h3 id="contract-first-philosophy">Contract first philosophy<a class="headerlink" href="#contract-first-philosophy" title="Permanent link">&para;</a></h3>
+<p>Many REST-based architectures, the API contract (such as an OpenAPI/Swagger specification) is often treated as an afterthought. It is frequently written after the code is implemented, simply to document what has been built. This "code-first" approach inevitably leads to "schema drift," where the documentation and the implementation become out of sync, causing integration failures.</p>
+<p>The gRPC workflow  makes this class of error impossible. The .proto file  is the single, indisputable source of truth. This "strongly typed contract" catches data structure and service errors at compile-time, not at runtime.</p>
+<h3 id="devlopers-workflow">Devlopers workflow<a class="headerlink" href="#devlopers-workflow" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Read [[ProtoBuf Workflow]] , [[Protoc Compiler]] and [[Serializing and Deserializing in ProtoBuf]] might be helpful in understanding the complexity beneath this.</p>
+</blockquote>
+<p>The .proto file is the starting point for a rigid, automated development workflow that is central to gRPC's design.</p>
+<ol>
+<li>
+<p><strong>Step 1: Define</strong>: The developer authors the .proto file, defining all data message types and service RPCs. This file becomes the single, authoritative source of truth for the API contract.</p>
+</li>
+<li>
+<p><strong>Step 2: Compile:</strong> The developer runs the Protocol Buffer compiler, protoc. This compiler is used with a language-specific gRPC plugin (e.g., protoc-gen-go-grpc).</p>
+</li>
+<li>
+<p><strong>Step 3: Generate:</strong> The compiler generates source code in the target programming language. This code is not trivial; it is a comprehensive set of tools, including     </p>
 <ul>
-<li><code>ProtoBuf Workflow</code> — contract-first development and <code>.proto</code> file structure.</li>
-<li><code>Protoc Compiler</code> — how to invoke <code>protoc</code> and useful flags/plugins.</li>
-<li><code>Interface Definition Language</code> — message syntax, naming conventions, and examples.</li>
-<li><code>Serializing and Deserializing in ProtoBuf</code> — runtime serialization and parsing patterns.</li>
-<li><code>Best Practices for Protobuf</code> — style, file organization, and schema evolution guidance.</li>
-<li><code>ProtoBuf VS JSON VS XML</code> — comparison of formats and trade-offs.</li>
+<li>
+<p><strong>Data Access Classes</strong>: For each message type, the compiler generates a class (e.g., HelloRequest in Java or C++) with all the necessary methods for populating fields, serializing the message to binary, and parsing binary data back into the object.</p>
+</li>
+<li>
+<p><strong>Server Skeleton:</strong> A "service base class" or interface (e.g., GreeterServer) that defines the abstract methods the server-side application must implement.</p>
+</li>
+<li>
+<p><strong>Client Stub:</strong> A client-side "stub" (e.g., GreeterClient) that provides concrete methods for the client application to call. This stub handles all the work of serializing the request, sending it to the server, and parsing the response.</p>
+</li>
 </ul>
-<p>Use the links above to jump to a specific topic.</p>
+</li>
+<li>
+<p><strong>Step 4: Implement:</strong> The server-side developer's task is reduced to implementing the generated service interface. The client-side developer's task is reduced to instantiating and calling the methods on the generated client stub.</p>
+</li>
+</ol>
+<h1 id="grpc">grpc<a class="headerlink" href="#grpc" title="Permanent link">&para;</a></h1>
 
 
 
@@ -1221,10 +1321,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.indexes", "navigation.tracking", "navigation.top", "search.highlight", "search.suggest", "toc.integrate", "content.code.copy", "content.action.edit", "header.autohide"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.indexes", "navigation.tracking", "navigation.top", "search.highlight", "search.suggest", "toc.integrate", "content.code.copy", "content.action.edit", "header.autohide"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
     
   </body>

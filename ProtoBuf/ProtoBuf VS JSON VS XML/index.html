@@ -996,6 +996,122 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gRPC
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    gRPC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gRPC/Foundation%20of%20gRPC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foundation of gRPC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gRPC/gRPC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gRPC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1083,6 +1199,75 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Example Payload for different format</strong></p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Payload Example</th>
+<th>Size (bytes)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JSON</td>
+<td>{"id":42}</td>
+<td>9 bytes</td>
+<td>Assumes ASCII, no whitespace.</td>
+</tr>
+<tr>
+<td>XML</td>
+<td><id>42</id></td>
+<td>11 bytes</td>
+<td>Assumes ASCII, no whitespace.</td>
+</tr>
+<tr>
+<td>Protob</td>
+<td>0x08 0x2a</td>
+<td>2 bytes</td>
+<td>Schema-dependent, not human-readable.</td>
+</tr>
+</tbody>
+</table>
+<p>Payload size difference between JSON and Protobuf</p>
+<table>
+<thead>
+<tr>
+<th>Payload</th>
+<th>Raw JSON Size</th>
+<th>Protobuf Size</th>
+<th>Protobuf Size (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 tickers</td>
+<td>58 bytes</td>
+<td>13 bytes</td>
+<td>22.4%</td>
+</tr>
+<tr>
+<td>10 tickers</td>
+<td>396 bytes</td>
+<td>133 bytes</td>
+<td>33.6%</td>
+</tr>
+<tr>
+<td>200 tickers</td>
+<td>6,578 bytes</td>
+<td>2,413 bytes</td>
+<td>36.7%</td>
+</tr>
+<tr>
+<td>2000 tickers</td>
+<td>65,250 bytes</td>
+<td>24,013 bytes</td>
+<td>36.8%</td>
+</tr>
+</tbody>
+</table>
+<p>#protobuf #preformance</p>
 
 
 

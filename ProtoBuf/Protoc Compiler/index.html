@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#protobuf" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -875,6 +880,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -989,6 +996,122 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gRPC
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    gRPC
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gRPC/Foundation%20of%20gRPC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Foundation of gRPC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gRPC/gRPC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gRPC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1014,8 +1137,6 @@
   
 
 
-  <h1>Protoc Compiler</h1>
-
 <p>Once the <code>.proto</code> schema is defined, the next step is to use the Protocol Buffer compiler, <code>protoc</code>. This is a command-line tool that parses the <code>.proto</code> file and generates source code in a specified target programming language. This generated code provides the necessary classes, data structures, and methods to work with the defined messages in a native, idiomatic way for that language.</p>
 <p>The <code>protoc</code> compiler is designed with a highly extensible plugin architecture. The core <code>protoc</code> binary is responsible for parsing the <code>.proto</code> file into an abstract syntax tree. It then passes this representation to a language-specific plugin, which is responsible for the actual code generation.</p>
 <p>A typical invocation of the compiler from the command line looks like this:</p>
@@ -1039,6 +1160,7 @@
 <li><strong>Serialization Methods</strong>: Functions to serialize the message object into a compact binary byte array (e.g., <code>SerializeToString()</code>, <code>toByteArray()</code>, <code>writeTo(OutputStream)</code>).</li>
 <li><strong>Deserialization Methods</strong>: Static methods or functions to parse a binary byte array back into a message object (e.g., <code>ParseFromString()</code>, <code>parseFrom(InputStream)</code>).</li>
 </ol>
+<h1 id="protobuf">protobuf<a class="headerlink" href="#protobuf" title="Permanent link">&para;</a></h1>
 
 
 
