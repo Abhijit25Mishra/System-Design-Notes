@@ -1,30 +1,44 @@
 {
   "collapse-filter": false,
   "search": "",
-  "showTags": false,
+  "showTags": true,
   "showAttachments": false,
-  "hideUnresolved": false,
-  "showOrphans": true,
-  "collapse-color-groups": true,
+  "hideUnresolved": true,
+  "showOrphans": false,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "",
+      "query": "tag:#protobuf  ",
       "color": {
         "a": 1,
         "rgb": 14725458
       }
+    },
+    {
+      "query": "tag:grpc",
+      "color": {
+        "a": 1,
+        "rgb": 9371648
+      }
+    },
+    {
+      "query": "",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
+      }
     }
   ],
-  "collapse-display": false,
+  "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": -0.7,
-  "nodeSizeMultiplier": 1.38866943866944,
-  "lineSizeMultiplier": 1.93877338877339,
-  "collapse-forces": false,
-  "centerStrength": 0.35031185031185,
-  "repelStrength": 12.4948024948025,
-  "linkStrength": 0.786902286902287,
+  "nodeSizeMultiplier": 1.91839916839917,
+  "lineSizeMultiplier": 2.61112266112266,
+  "collapse-forces": true,
+  "centerStrength": 0.366943866943867,
+  "repelStrength": 11.9126819126819,
+  "linkStrength": 0.362785862785863,
   "linkDistance": 197,
-  "scale": 0.5534864413180005,
+  "scale": 0.43786959951191545,
   "close": true
 }

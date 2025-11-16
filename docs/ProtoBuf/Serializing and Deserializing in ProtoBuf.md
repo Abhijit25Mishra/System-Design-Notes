@@ -53,3 +53,4 @@ The deserialization process is the mirror image of serialization:
    - Use the generated getter methods to access the data
    - Object is immutable to ensure thread safety
 
+#protobuf 

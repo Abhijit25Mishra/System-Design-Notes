@@ -37,3 +37,5 @@ This discipline of creating purpose-built messages ensures the API remains exten
 | Change from singular to repeated      | No                   | No                  | The wire format is incompatible.                                                                           |
 | Add a field to an existing oneof      | Yes                  | No                  | Old clients will not recognize the new oneof variant, leading to potential data loss or misinterpretation. |
 | Remove a field from an existing oneof | No                   | Yes                 | New clients may misinterpret old data containing the removed variant, leading to cascading data loss.      |
+
+#protobuf #bestpractise

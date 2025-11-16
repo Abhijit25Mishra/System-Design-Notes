@@ -24,3 +24,5 @@ This generates a set of source files that provide rich, language-specific APIs f
 4. **Presence Methods**: For fields with explicit presence (optional fields in proto2 or proto3, or all singular fields in editions), methods are generated to check if a field has been set (e.g., `has_name()`).
 5. **Serialization Methods**: Functions to serialize the message object into a compact binary byte array (e.g., `SerializeToString()`, `toByteArray()`, `writeTo(OutputStream)`).
 6. **Deserialization Methods**: Static methods or functions to parse a binary byte array back into a message object (e.g., `ParseFromString()`, `parseFrom(InputStream)`).
+
+#protobuf 

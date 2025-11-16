@@ -36,3 +36,4 @@ The basic structure of a `.proto` file includes several key components:
 
 By centralizing the API definition in this way, the .proto file becomes the focal point for design reviews and collaboration. Teams can agree on the contract before writing any implementation code, which decouples the interface from the implementation and facilitates parallel development. This "contract-first" approach significantly reduces integration errors and creates a system that is inherently self-documenting, with the .proto file acting as formal, machine-readable documentation.
 
+#protobuf 
